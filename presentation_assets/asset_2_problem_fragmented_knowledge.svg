@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" style="background:#080E1A; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080E1A" />
+      <stop offset="50%" stop-color="#0C1527" />
+      <stop offset="100%" stop-color="#070D18" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111C30" />
+      <stop offset="100%" stop-color="#0D1626" />
+    </linearGradient>
+    <linearGradient id="alertGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A171A" />
+      <stop offset="100%" stop-color="#241014" />
+    </linearGradient>
+    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
+    </linearGradient>
+    
+    <!-- Filter for subtle drop shadow -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+  
+  <!-- Subtle technical grid background -->
+  <g opacity="0.06" stroke="#4A7BB0" stroke-width="1">
+    <pattern id="techGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="60" y2="0" />
+      <line x1="0" y1="0" x2="0" y2="60" />
+    </pattern>
+    <rect width="1920" height="1080" fill="url(#techGrid)" />
+  </g>
+
+  <!-- Header Section -->
+  <g transform="translate(100, 75)">
+    <!-- Category Badge -->
+    <rect x="0" y="0" width="168" height="28" rx="4" fill="#E06D53" fill-opacity="0.15" stroke="#E06D53" stroke-width="1.2" />
+    <text x="84" y="18" fill="#E06D53" font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="middle">OPERATIONAL CHALLENGE</text>
+    
+    <!-- Title -->
+    <text x="0" y="68" fill="#FFFFFF" font-size="38" font-weight="800" letter-spacing="-0.5">The Problem: Fragmented Drilling Knowledge</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="105" fill="#8FA0BC" font-size="18" font-weight="400">
+      Decades of critical offset-well experience remain locked in disconnected silos, requiring tedious manual review while drilling hazards repeat.
+    </text>
+  </g>
+
+  <!-- Left/Center: 4 Fragmented Knowledge Silos -->
+  <!-- Silo 1: Well Completion Reports (WCR) -->
+  <g transform="translate(100, 240)" filter="url(#cardShadow)">
+    <rect width="380" height="230" rx="8" fill="url(#cardGrad)" stroke="#1F314D" stroke-width="1.5" />
+    <!-- Top accent line -->
+    <line x1="0" y1="0" x2="380" y2="0" stroke="#E06D53" stroke-width="3" stroke-opacity="0.8" />
+    
+    <!-- Silo Tag & Icon -->
+    <rect x="24" y="24" width="36" height="36" rx="6" fill="#1A2942" stroke="#2B4268" stroke-width="1" />
+    <path d="M36 34 h12 M36 40 h12 M36 46 h8" stroke="#00E5FF" stroke-width="2" stroke-linecap="round" />
+    <text x="72" y="42" fill="#E2E8F0" font-size="17" font-weight="700">Well Completion Reports</text>
+    <text x="72" y="58" fill="#64748B" font-size="12" font-weight="600">STATIC ARCHIVES · PDF / SCANNED TIFF</text>
+
+    <!-- Details -->
+    <text x="24" y="96" fill="#94A3B8" font-size="14" line-height="22">
+      <tspan x="24" dy="0">• 80–200 page historical completion dossiers</tspan>
+      <tspan x="24" dy="24">• Key operational events buried in narrative text</tspan>
+      <tspan x="24" dy="24">• No direct spatial or depth-indexing</tspan>
+      <tspan x="24" dy="24">• Static tables isolated from active rig context</tspan>
+    </text>
+
+    <!-- Silo Status Tag -->
+    <rect x="24" y="180" width="130" height="24" rx="4" fill="#E06D53" fill-opacity="0.12" />
+    <text x="89" y="196" fill="#E06D53" font-size="11" font-weight="700" text-anchor="middle">UNSTRUCTURED PDF</text>
+  </g>
+
+  <!-- Silo 2: Daily Drilling Reports (DDR) -->
+  <g transform="translate(510, 240)" filter="url(#cardShadow)">
+    <rect width="380" height="230" rx="8" fill="url(#cardGrad)" stroke="#1F314D" stroke-width="1.5" />
+    <line x1="0" y1="0" x2="380" y2="0" stroke="#E06D53" stroke-width="3" stroke-opacity="0.8" />
+    
+    <rect x="24" y="24" width="36" height="36" rx="6" fill="#1A2942" stroke="#2B4268" stroke-width="1" />
+    <path d="M34 42 l6 6 l12 -12" stroke="#00E5FF" stroke-width="2" fill="none" stroke-linecap="round" />
+    <text x="72" y="42" fill="#E2E8F0" font-size="17" font-weight="700">Daily Drilling Reports (DDR)</text>
+    <text x="72" y="58" fill="#64748B" font-size="12" font-weight="600">SHIFT LOGS · 24-HOUR INTERVALS</text>
+
+    <text x="24" y="96" fill="#94A3B8" font-size="14">
+      <tspan x="24" dy="0">• Thousands of disjointed daily operational files</tspan>
+      <tspan x="24" dy="24">• Crucial mud losses recorded as informal remarks</tspan>
+      <tspan x="24" dy="24">• Inconsistent terminology (loss vs seep vs fracture)</tspan>
+      <tspan x="24" dy="24">• Time-consuming manual keyword search</tspan>
+    </text>
+
+    <rect x="24" y="180" width="145" height="24" rx="4" fill="#E06D53" fill-opacity="0.12" />
+    <text x="96" y="196" fill="#E06D53" font-size="11" font-weight="700" text-anchor="middle">ISOLATED LOG FILES</text>
+  </g>
+
+  <!-- Silo 3: Mud Logs & Parameter Sheets -->
+  <g transform="translate(100, 500)" filter="url(#cardShadow)">
+    <rect width="380" height="230" rx="8" fill="url(#cardGrad)" stroke="#1F314D" stroke-width="1.5" />
+    <line x1="0" y1="0" x2="380" y2="0" stroke="#E06D53" stroke-width="3" stroke-opacity="0.8" />
+    
+    <rect x="24" y="24" width="36" height="36" rx="6" fill="#1A2942" stroke="#2B4268" stroke-width="1" />
+    <path d="M32 46 L38 34 L44 42 L52 30" stroke="#00E5FF" stroke-width="2" fill="none" stroke-linecap="round" />
+    <text x="72" y="42" fill="#E2E8F0" font-size="17" font-weight="700">Mud Logs & Parameter Sheets</text>
+    <text x="72" y="58" fill="#64748B" font-size="12" font-weight="600">STRIP CHARTS · DISCONNECTED LAS</text>
+
+    <text x="24" y="96" fill="#94A3B8" font-size="14">
+      <tspan x="24" dy="0">• Gas peaks and lithology logs stored separately</tspan>
+      <tspan x="24" dy="24">• Mud weight & rheology recorded in paper binders</tspan>
+      <tspan x="24" dy="24">• Difficult to cross-correlate across multi-wells</tspan>
+      <tspan x="24" dy="24">• Lack of depth-aligned visual comparisons</tspan>
+    </text>
+
+    <rect x="24" y="180" width="140" height="24" rx="4" fill="#E06D53" fill-opacity="0.12" />
+    <text x="94" y="196" fill="#E06D53" font-size="11" font-weight="700" text-anchor="middle">DISPERSED CHARTS</text>
+  </g>
+
+  <!-- Silo 4: Institutional Memory & Field Notes -->
+  <g transform="translate(510, 500)" filter="url(#cardShadow)">
+    <rect width="380" height="230" rx="8" fill="url(#cardGrad)" stroke="#1F314D" stroke-width="1.5" />
+    <line x1="0" y1="0" x2="380" y2="0" stroke="#E06D53" stroke-width="3" stroke-opacity="0.8" />
+    
+    <rect x="24" y="24" width="36" height="36" rx="6" fill="#1A2942" stroke="#2B4268" stroke-width="1" />
+    <circle cx="42" cy="42" r="10" stroke="#00E5FF" stroke-width="2" fill="none" />
+    <path d="M42 36 v6 h4" stroke="#00E5FF" stroke-width="2" stroke-linecap="round" />
+    <text x="72" y="42" fill="#E2E8F0" font-size="17" font-weight="700">Institutional Experience</text>
+    <text x="72" y="58" fill="#64748B" font-size="12" font-weight="600">UNRECORDED DRILLER KNOWLEDGE</text>
+
+    <text x="24" y="96" fill="#94A3B8" font-size="14">
+      <tspan x="24" dy="0">• Successful LCM formulations stored in personal notes</tspan>
+      <tspan x="24" dy="24">• Experience leaves with rotating crew & retirement</tspan>
+      <tspan x="24" dy="24">• No systematic search for "what worked last time"</tspan>
+      <tspan x="24" dy="24">• Same stuck-pipe sequences repeated on new rigs</tspan>
+    </text>
+
+    <rect x="24" y="180" width="150" height="24" rx="4" fill="#E06D53" fill-opacity="0.12" />
+    <text x="99" y="196" fill="#E06D53" font-size="11" font-weight="700" text-anchor="middle">TACIT KNOWLEDGE</text>
+  </g>
+
+  <!-- Connecting dashed lines to the central friction area -->
+  <g stroke="#E06D53" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.6">
+    <path d="M480 355 C 650 355, 780 450, 930 470" fill="none" />
+    <path d="M890 355 C 900 355, 910 420, 930 470" fill="none" />
+    <path d="M480 615 C 650 615, 780 520, 930 510" fill="none" />
+    <path d="M890 615 C 900 615, 910 540, 930 510" fill="none" />
+  </g>
+
+  <!-- Center-Right: The Operational Bottleneck & Human Burden -->
+  <g transform="translate(940, 240)" filter="url(#cardShadow)">
+    <rect width="400" height="490" rx="10" fill="#0E1729" stroke="#E06D53" stroke-width="2" />
+    
+    <!-- Banner -->
+    <rect x="0" y="0" width="400" height="60" rx="10" fill="#2D1518" />
+    <rect x="0" y="50" width="400" height="10" fill="#2D1518" />
+    <text x="200" y="38" fill="#FFA590" font-size="16" font-weight="800" letter-spacing="1" text-anchor="middle">THE HUMAN BOTTLENECK</text>
+    
+    <!-- Central visual graphic: Manual Search Strain -->
+    <g transform="translate(200, 135)">
+      <circle cx="0" cy="0" r="44" fill="#1A2338" stroke="#334B73" stroke-width="2" />
+      <!-- Drilling Engineer Icon -->
+      <circle cx="0" cy="-12" r="14" fill="#E2E8F0" />
+      <path d="M-22 18 C -22 0, 22 0, 22 18" fill="#E2E8F0" />
+      <!-- Disconnection Rings -->
+      <circle cx="0" cy="0" r="58" fill="none" stroke="#E06D53" stroke-width="1.5" stroke-dasharray="4,4" />
+      <!-- Warning indicator -->
+      <polygon points="26,-36 38,-14 14,-14" fill="#E06D53" />
+      <text x="26" y="-18" fill="#080E1A" font-size="14" font-weight="900" text-anchor="middle">!</text>
+    </g>
+
+    <text x="200" y="215" fill="#FFFFFF" font-size="19" font-weight="700" text-anchor="middle">Manual Cross-Referencing</text>
+    <text x="200" y="238" fill="#8FA0BC" font-size="13" text-anchor="middle">Engineers under time pressure drill into known hazards</text>
+
+    <!-- Bottleneck bullet cards -->
+    <g transform="translate(24, 260)">
+      <rect width="352" height="60" rx="6" fill="#152136" stroke="#233554" stroke-width="1" />
+      <text x="18" y="26" fill="#E06D53" font-size="18" font-weight="800">12–18 Hours</text>
+      <text x="18" y="46" fill="#94A3B8" font-size="12">Lost per planning cycle manually combing raw archives</text>
+    </g>
+
+    <g transform="translate(24, 332)">
+      <rect width="352" height="60" rx="6" fill="#152136" stroke="#233554" stroke-width="1" />
+      <text x="18" y="26" fill="#E06D53" font-size="18" font-weight="800">&gt; 75% Data Unused</text>
+      <text x="18" y="46" fill="#94A3B8" font-size="12">Valuable historical notes never reviewed during live operations</text>
+    </g>
+
+    <g transform="translate(24, 404)">
+      <rect width="352" height="60" rx="6" fill="#152136" stroke="#233554" stroke-width="1" />
+      <text x="18" y="26" fill="#E06D53" font-size="18" font-weight="800">Isolated Telemetry</text>
+      <text x="18" y="46" fill="#94A3B8" font-size="12">Real-time eRTMAC displays current well without offset context</text>
+    </g>
+  </g>
+
+  <!-- Far Right: Downstream Financial & Operational Consequence -->
+  <g transform="translate(1380, 240)" filter="url(#cardShadow)">
+    <rect width="440" height="490" rx="10" fill="url(#alertGrad)" stroke="#7A2222" stroke-width="1.5" />
+    
+    <rect x="0" y="0" width="440" height="60" rx="10" fill="#4A181C" />
+    <rect x="0" y="50" width="440" height="10" fill="#4A181C" />
+    <text x="220" y="38" fill="#FFC5B5" font-size="16" font-weight="800" letter-spacing="1" text-anchor="middle">DOWNSTREAM CONSEQUENCES</text>
+
+    <!-- Impact Item 1: Recurrent Mud Loss -->
+    <g transform="translate(24, 85)">
+      <rect width="392" height="110" rx="6" fill="#1D1014" stroke="#5A1F24" stroke-width="1" />
+      <text x="20" y="30" fill="#FF6B6B" font-size="16" font-weight="700">Recurrent Lost Circulation (Mud Loss)</text>
+      <text x="20" y="54" fill="#C9A0A0" font-size="13">
+        Drilling penetrates offset depleted sands or fracture networks without prior awareness of offset loss rates (~25 bbl/hr).
+      </text>
+      <text x="20" y="92" fill="#E06D53" font-size="12" font-weight="700">Cost: High LCM consumption &amp; wellbore instability</text>
+    </g>
+
+    <!-- Impact Item 2: Preventable Stuck Pipe & NPT -->
+    <g transform="translate(24, 215)">
+      <rect width="392" height="110" rx="6" fill="#1D1014" stroke="#5A1F24" stroke-width="1" />
+      <text x="20" y="30" fill="#FF6B6B" font-size="16" font-weight="700">Differential Sticking &amp; NPT</text>
+      <text x="20" y="54" fill="#C9A0A0" font-size="13">
+        String left stationary during connection across permeable zones. Offset X12 experienced 42 hours NPT under identical condition.
+      </text>
+      <text x="20" y="92" fill="#E06D53" font-size="12" font-weight="700">Impact: 24–48+ hours lost rig time (₹50L+ rig cost)</text>
+    </g>
+
+    <!-- Impact Item 3: Reactive Decisions -->
+    <g transform="translate(24, 345)">
+      <rect width="392" height="110" rx="6" fill="#1D1014" stroke="#5A1F24" stroke-width="1" />
+      <text x="20" y="30" fill="#FF6B6B" font-size="16" font-weight="700">Trial-and-Error Mitigations</text>
+      <text x="20" y="54" fill="#C9A0A0" font-size="13">
+        Crews attempt generic field remedies rather than deploying the exact bridging LCM formulation that worked in nearby wells.
+      </text>
+      <text x="20" y="92" fill="#E06D53" font-size="12" font-weight="700">Result: Prolonged troubleshooting &amp; side-track risk</text>
+    </g>
+  </g>
+
+  <!-- Bottom Key Takeaway Callout Banner -->
+  <g transform="translate(100, 780)" filter="url(#cardShadow)">
+    <rect width="1720" height="90" rx="8" fill="#0F1B30" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.4" />
+    <line x1="0" y1="0" x2="1720" y2="0" stroke="url(#cyanLine)" stroke-width="2" />
+    
+    <rect x="30" y="28" width="34" height="34" rx="4" fill="#00E5FF" fill-opacity="0.15" />
+    <text x="47" y="51" fill="#00E5FF" font-size="18" font-weight="900" text-anchor="middle">💡</text>
+    
+    <text x="80" y="44" fill="#E2E8F0" font-size="16" font-weight="700">THE CORE GAP ADDRESSED BY NWIS:</text>
+    <text x="80" y="66" fill="#94A3B8" font-size="14">
+      Real-time rig telemetry monitors <tspan fill="#FFFFFF" font-weight="600">what is happening right now in this well</tspan>, but engineers lack automated visibility into <tspan fill="#00E5FF" font-weight="600">what happened in nearby offset wells at this exact depth and formation</tspan>.
+    </text>
+  </g>
+
+  <!-- Footer metadata -->
+  <g transform="translate(100, 1020)">
+    <text x="0" y="0" fill="#4B6382" font-size="13" font-weight="600">SIH 2026 · PROBLEM STATEMENT 26121</text>
+    <text x="960" y="0" fill="#4B6382" font-size="13" text-anchor="middle">eRTMAC-NWIS Conceptual Architecture Design</text>
+    <text x="1720" y="0" fill="#4B6382" font-size="13" font-weight="600" text-anchor="end">SLIDE 2: THE PROBLEM</text>
+  </g>
+</svg>

@@ -1,0 +1,240 @@
+/* NWIS Phase 1 Foundation Check Styles */
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0a0f1e;
+  min-height: 100vh;
+  color: #e2e8f0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0d1b3e 0%, #1a2744 100%);
+  border: 1px solid #2d3f6e;
+  border-radius: 12px;
+}
+
+.badge {
+  display: inline-block;
+  background: #1e40af;
+  color: #93c5fd;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0.5rem 0;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.disclaimer {
+  color: #f59e0b;
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+.section {
+  margin-bottom: 2rem;
+  background: #111827;
+  border: 1px solid #1f2d4a;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #60a5fa;
+  margin: 0 0 1rem 0;
+}
+
+.sectionHeader h2 { margin-bottom: 0; }
+
+.errorBanner {
+  background: #450a0a;
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #fca5a5;
+}
+
+/* Check list */
+.checkList { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.checkItem.pass { background: #052e16; border-left: 3px solid #16a34a; }
+.checkItem.fail { background: #450a0a; border-left: 3px solid #dc2626; }
+
+.checkIcon { font-size: 0.9rem; width: 18px; text-align: center; }
+.pass .checkIcon { color: #4ade80; }
+.fail .checkIcon { color: #f87171; }
+
+.checkLabel { flex: 1; color: #e2e8f0; }
+
+.checkDetail {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: monospace;
+  background: rgba(255,255,255,0.05);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.scoreBadge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+.scorePass { background: #052e16; color: #4ade80; border: 1px solid #16a34a; }
+.scoreMixed { background: #422006; color: #fb923c; border: 1px solid #ea580c; }
+
+.loading { color: #94a3b8; font-style: italic; padding: 0.5rem; }
+
+/* Status grid */
+.statusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.statusCard {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.statusCard.statusOk { border-color: #16a34a; background: #052e16; }
+.statusCard.statusDegraded { border-color: #dc2626; background: #450a0a; }
+
+.statusLabel { font-size: 0.75rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.08em; }
+.statusValue { font-size: 1.1rem; font-weight: 700; color: #f8fafc; margin-top: 0.3rem; }
+
+/* Well card */
+.wellCard {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+.wellHeader { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.wellName { font-size: 1.5rem; font-weight: 700; color: #38bdf8; }
+.wellFields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+.field { display: flex; flex-direction: column; }
+.field span { font-size: 0.75rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.06em; }
+.field strong { color: #f1f5f9; font-size: 0.95rem; }
+
+/* Status pills */
+.statusPill { font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.08em; }
+.status_ACTIVE { background: #052e16; color: #4ade80; border: 1px solid #16a34a; }
+.status_COMPLETED { background: #1e1b4b; color: #818cf8; border: 1px solid #4f46e5; }
+.status_SUSPENDED { background: #422006; color: #fb923c; border: 1px solid #ea580c; }
+.status_ABANDONED { background: #1c1917; color: #a8a29e; border: 1px solid #57534e; }
+.status_PLANNED { background: #0c1a2e; color: #93c5fd; border: 1px solid #3b82f6; }
+
+/* Alert cards */
+.alertCard { border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; }
+.sev_HIGH { background: #450a0a; border: 1px solid #dc2626; }
+.sev_MEDIUM { background: #422006; border: 1px solid #d97706; }
+.sev_LOW { background: #052e16; border: 1px solid #16a34a; }
+.sev_CRITICAL { background: #3b0764; border: 1px solid #9333ea; }
+
+.alertHeader { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.5rem; }
+.alertType { font-weight: 700; font-size: 0.85rem; color: #f8fafc; }
+.alertSev { font-size: 0.7rem; font-weight: 700; color: #fca5a5; text-transform: uppercase; }
+.alertMsg { font-size: 0.8rem; color: #d1d5db; line-height: 1.5; margin: 0; }
+
+/* Risk bars */
+.riskRow { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.6rem; }
+.riskType { width: 140px; font-size: 0.8rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+.riskBarWrap { flex: 1; height: 10px; background: #1f2937; border-radius: 5px; overflow: hidden; }
+.riskBar { height: 100%; background: linear-gradient(90deg, #1d4ed8, #60a5fa); border-radius: 5px; transition: width 0.3s; }
+.riskScore { width: 40px; text-align: right; font-weight: 700; color: #f8fafc; font-size: 0.875rem; }
+.note { font-size: 0.75rem; color: #6b7280; font-style: italic; margin-bottom: 0.75rem; }
+
+/* Event cards */
+.eventCard { background: #1f2937; border: 1px solid #374151; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem; }
+.eventHeader { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.5rem; }
+.eventType { font-weight: 700; font-size: 0.85rem; color: #38bdf8; }
+.eventDepth { font-size: 0.85rem; color: #94a3b8; }
+.eventSev { font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px; text-transform: uppercase; }
+.eventDesc { font-size: 0.8rem; color: #9ca3af; margin: 0.3rem 0 0.75rem; }
+
+.mitigations { background: #111827; border-radius: 6px; padding: 0.75rem; font-size: 0.8rem; }
+.mitigation { display: flex; gap: 0.5rem; margin-top: 0.4rem; color: #d1d5db; line-height: 1.4; }
+.mitSuc { font-size: 0.7rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 3px; white-space: nowrap; }
+.mit_SUCCESS { background: #052e16; color: #4ade80; }
+.mit_PARTIAL { background: #422006; color: #fb923c; }
+.mit_FAILURE { background: #450a0a; color: #f87171; }
+.mit_UNKNOWN { background: #1f2937; color: #9ca3af; }
+
+/* Recommendations */
+.recCard { background: #1e1b4b; border: 1px solid #4f46e5; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; }
+.recHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; font-weight: 700; color: #818cf8; }
+.evidenceBadge { font-size: 0.7rem; background: #312e81; color: #a5b4fc; padding: 0.15rem 0.5rem; border-radius: 4px; }
+.recText { font-size: 0.85rem; color: #e2e8f0; margin: 0.3rem 0; }
+.recEvidence { font-size: 0.75rem; color: #6b7280; margin: 0.25rem 0 0; }
+
+/* Well grid */
+.wellGrid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.wellChip {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  min-width: 70px;
+  border: 1px solid transparent;
+}
+.wellChip strong { font-size: 0.9rem; }
+
+/* Footer */
+.footer { text-align: center; margin-top: 2rem; padding: 1rem; }
+.footer p { color: #4b5563; font-size: 0.75rem; margin-bottom: 0.5rem; }
+.rerunBtn {
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+}
+.rerunBtn:hover { background: #1e40af; }

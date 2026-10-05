@@ -1,0 +1,7 @@
+DAILY DRILLING REPORT - Well X12
+Report Date: 2022-12-10 | Current Depth: 3845 m MD
+Formation: F3 (Base transition)
+Operations Summary:
+At 3845 m MD during rotary drilling, significant mud loss encountered. Loss rate ~25 bbl/hr with total lost circulation risk.
+Root Cause: Natural fracture network encountered at transition into F3 base.
+Mitigation: Pumped 50-bbl mixed coarse/medium LCM pill. Lowered flow rate to 1400 lpm to reduce downhole ECD to 1.08 sg.

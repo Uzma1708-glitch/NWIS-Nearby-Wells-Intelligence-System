@@ -1,0 +1,10 @@
+DAILY DRILLING REPORT - Well X09
+Report Date: 2024-04-12 | Current Depth: 3790 m MD | Basin: Assam-Arakan
+Formation Lithology Table:
+Barail Shale: 3700 m to 3820 m
+Operations Summary & Incident Log:
+At 3764 m depth in Barail Shale, severe mud loss observed with loss rate ~18 bbl/hr.
+Mitigation: Spotted LCM pill (CaCO3 25 ppb) to cure lost circulation.
+At 3772 m, experienced tight hole and stuck pipe condition with 18 tonnes overpull. Worked string worked free after 45 minutes.
+Drilling continued: torque spike observed across 3778 to 3790 m with erratic torque 17 to 26 kNm.
+Mitigation applied: mud weight raised 1.06 to 1.09 sg, conducted wiper trip, connection standstill under 10 minutes.

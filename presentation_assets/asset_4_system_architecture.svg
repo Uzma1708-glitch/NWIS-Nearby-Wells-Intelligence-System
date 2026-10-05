@@ -1,0 +1,398 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" style="background:#070D18; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070D18" />
+      <stop offset="50%" stop-color="#0B1526" />
+      <stop offset="100%" stop-color="#050A14" />
+    </linearGradient>
+
+    <!-- Layer Card Gradients -->
+    <linearGradient id="layerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E192D" />
+      <stop offset="100%" stop-color="#11213D" />
+    </linearGradient>
+
+    <linearGradient id="compGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#162744" />
+      <stop offset="100%" stop-color="#0E1B33" />
+    </linearGradient>
+
+    <!-- Future Banner Gradient -->
+    <linearGradient id="futureGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D1F38" />
+      <stop offset="100%" stop-color="#1B162E" />
+    </linearGradient>
+
+    <filter id="boxShadow" x="-5%" y="-10%" width="110%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+
+    <!-- Arrow Marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#00E5FF" />
+    </marker>
+    <marker id="arrowMuted" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#4B6A96" />
+    </marker>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#archBg)" />
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#4A7BB0" stroke-width="1">
+    <pattern id="grid4" width="50" height="50" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="50" y2="0" />
+      <line x1="0" y1="0" x2="0" y2="50" />
+    </pattern>
+    <rect width="1920" height="1080" fill="url(#grid4)" />
+  </g>
+
+  <!-- Header Section -->
+  <g transform="translate(100, 50)">
+    <rect x="0" y="0" width="180" height="26" rx="4" fill="#00E5FF" fill-opacity="0.12" stroke="#00E5FF" stroke-width="1" />
+    <text x="90" y="17" fill="#00E5FF" font-size="11" font-weight="700" letter-spacing="1.5" text-anchor="middle">SYSTEM ARCHITECTURE</text>
+    
+    <text x="0" y="58" fill="#FFFFFF" font-size="32" font-weight="800" letter-spacing="-0.5">NWIS End-to-End System Architecture</text>
+    <text x="0" y="85" fill="#8FA0BC" font-size="15">
+      Six-layer decision-support architecture transforming raw offset records and real-time active well context into evidence-backed hazard guidance.
+    </text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 1: DATA SOURCES -->
+  <!-- ========================================================================= -->
+  <g transform="translate(100, 160)" filter="url(#boxShadow)">
+    <rect width="1720" height="110" rx="8" fill="url(#layerGrad)" stroke="#1E3354" stroke-width="1.2" />
+    
+    <!-- Layer Identifier Left Badge -->
+    <rect x="0" y="0" width="170" height="110" rx="8" fill="#0A1526" />
+    <rect x="162" y="0" width="8" height="110" fill="#0A1526" />
+    <text x="85" y="44" fill="#00E5FF" font-size="12" font-weight="800" letter-spacing="1" text-anchor="middle">LAYER 1</text>
+    <text x="85" y="66" fill="#FFFFFF" font-size="15" font-weight="700" text-anchor="middle">Data Sources</text>
+    <text x="85" y="84" fill="#64748B" font-size="10" text-anchor="middle">Inputs &amp; Archives</text>
+
+    <!-- Source Boxes (4 components) -->
+    <g transform="translate(195, 18)">
+      <!-- Component 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="350" height="74" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="16" y="28" fill="#E2E8F0" font-size="14" font-weight="700">Public NLOG Borehole Records</text>
+        <text x="16" y="48" fill="#8FA0BC" font-size="11">1,000+ real coordinates, total depths, status</text>
+        <rect x="16" y="54" width="105" height="15" rx="3" fill="#00E5FF" fill-opacity="0.1" />
+        <text x="68" y="65" fill="#00E5FF" font-size="9" font-weight="700" text-anchor="middle">REAL PUBLIC DATA</text>
+      </g>
+
+      <!-- Component 2 -->
+      <g transform="translate(375, 0)">
+        <rect width="350" height="74" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="16" y="28" fill="#E2E8F0" font-size="14" font-weight="700">Well Trajectories &amp; Lithology</text>
+        <text x="16" y="48" fill="#8FA0BC" font-size="11">Directional surveys (MD/TVD), formation tops</text>
+        <rect x="16" y="54" width="120" height="15" rx="3" fill="#4B6A96" fill-opacity="0.2" />
+        <text x="76" y="65" fill="#93C5FD" font-size="9" font-weight="700" text-anchor="middle">SPATIAL / GEOLOGICAL</text>
+      </g>
+
+      <!-- Component 3 -->
+      <g transform="translate(750, 0)">
+        <rect width="350" height="74" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="16" y="28" fill="#E2E8F0" font-size="14" font-weight="700">Historical Reports (DDR / WCR)</text>
+        <text x="16" y="48" fill="#8FA0BC" font-size="11">Unstructured shift logs, mud sheets, completion files</text>
+        <rect x="16" y="54" width="115" height="15" rx="3" fill="#E06D53" fill-opacity="0.15" />
+        <text x="73" y="65" fill="#E06D53" font-size="9" font-weight="700" text-anchor="middle">UNSTRUCTURED DOCS</text>
+      </g>
+
+      <!-- Component 4 -->
+      <g transform="translate(1125, 0)">
+        <rect width="375" height="74" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="16" y="28" fill="#E2E8F0" font-size="14" font-weight="700">Simulated Rig Telemetry (Demo)</text>
+        <text x="16" y="48" fill="#8FA0BC" font-size="11">Depth progression, ROP, WOB, Torque, ECD</text>
+        <rect x="16" y="54" width="125" height="15" rx="3" fill="#E29578" fill-opacity="0.15" />
+        <text x="78" y="65" fill="#E29578" font-size="9" font-weight="700" text-anchor="middle">SIMULATED DEMO INPUT</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Downward Flow Arrows (Layer 1 -> Layer 2) -->
+  <g stroke="#00E5FF" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6">
+    <line x1="470" y1="270" x2="470" y2="295" marker-end="url(#arrow)" />
+    <line x1="845" y1="270" x2="845" y2="295" marker-end="url(#arrow)" />
+    <line x1="1220" y1="270" x2="1220" y2="295" marker-end="url(#arrow)" />
+    <line x1="1595" y1="270" x2="1595" y2="295" marker-end="url(#arrow)" />
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 2: DATA PROCESSING -->
+  <!-- ========================================================================= -->
+  <g transform="translate(100, 295)" filter="url(#boxShadow)">
+    <rect width="1720" height="105" rx="8" fill="url(#layerGrad)" stroke="#1E3354" stroke-width="1.2" />
+    
+    <rect x="0" y="0" width="170" height="105" rx="8" fill="#0A1526" />
+    <rect x="162" y="0" width="8" height="105" fill="#0A1526" />
+    <text x="85" y="42" fill="#00E5FF" font-size="12" font-weight="800" letter-spacing="1" text-anchor="middle">LAYER 2</text>
+    <text x="85" y="64" fill="#FFFFFF" font-size="15" font-weight="700" text-anchor="middle">Data Processing</text>
+    <text x="85" y="82" fill="#64748B" font-size="10" text-anchor="middle">Parsing &amp; Extraction</text>
+
+    <g transform="translate(195, 16)">
+      <!-- Step 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="280" height="72" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="14" y="26" fill="#E2E8F0" font-size="13" font-weight="700">Cleaning &amp; Normalization</text>
+        <text x="14" y="44" fill="#8FA0BC" font-size="11">Coordinate transform (WGS84)</text>
+        <text x="14" y="60" fill="#64748B" font-size="10">Unit alignment (m MD / TVD)</text>
+      </g>
+      <!-- Step 2 -->
+      <g transform="translate(300, 0)">
+        <rect width="280" height="72" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="14" y="26" fill="#E2E8F0" font-size="13" font-weight="700">PDF Text Extraction</text>
+        <text x="14" y="44" fill="#8FA0BC" font-size="11">pdfjs-dist in-memory parser</text>
+        <text x="14" y="60" fill="#00E5FF" font-size="10">Local zero-latency extraction</text>
+      </g>
+      <!-- Step 3 -->
+      <g transform="translate(600, 0)">
+        <rect width="280" height="72" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="14" y="26" fill="#E2E8F0" font-size="13" font-weight="700">OCR-Assisted Extraction</text>
+        <text x="14" y="44" fill="#8FA0BC" font-size="11">Tesseract.js WASM engine</text>
+        <text x="14" y="60" fill="#00E5FF" font-size="10">Scanned shift reports &amp; logs</text>
+      </g>
+      <!-- Step 4 -->
+      <g transform="translate(900, 0)">
+        <rect width="300" height="72" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="14" y="26" fill="#E2E8F0" font-size="13" font-weight="700">Rule-Based Domain NLP</text>
+        <text x="14" y="44" fill="#8FA0BC" font-size="11">Incident synonyms &amp; regex</text>
+        <text x="14" y="60" fill="#64748B" font-size="10">Confidence metric (0.20–0.96)</text>
+      </g>
+      <!-- Step 5 -->
+      <g transform="translate(1220, 0)">
+        <rect width="280" height="72" rx="6" fill="url(#compGrad)" stroke="#00E5FF" stroke-width="1.2" />
+        <text x="14" y="26" fill="#00E5FF" font-size="13" font-weight="700">Human-in-the-Loop Review</text>
+        <text x="14" y="44" fill="#8FA0BC" font-size="11">Engineer verification modal</text>
+        <text x="14" y="60" fill="#E2E8F0" font-size="10">Edit, approve, commit events</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Downward Flow Arrows (Layer 2 -> Layer 3) -->
+  <g stroke="#00E5FF" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6">
+    <line x1="570" y1="400" x2="570" y2="425" marker-end="url(#arrow)" />
+    <line x1="1170" y1="400" x2="1170" y2="425" marker-end="url(#arrow)" />
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 3: HISTORICAL KNOWLEDGE LAYER -->
+  <!-- ========================================================================= -->
+  <g transform="translate(100, 425)" filter="url(#boxShadow)">
+    <rect width="840" height="110" rx="8" fill="url(#layerGrad)" stroke="#1E3354" stroke-width="1.2" />
+    
+    <rect x="0" y="0" width="170" height="110" rx="8" fill="#0A1526" />
+    <rect x="162" y="0" width="8" height="110" fill="#0A1526" />
+    <text x="85" y="42" fill="#00E5FF" font-size="12" font-weight="800" letter-spacing="1" text-anchor="middle">LAYER 3</text>
+    <text x="85" y="64" fill="#FFFFFF" font-size="14" font-weight="700" text-anchor="middle">Knowledge Layer</text>
+    <text x="85" y="82" fill="#64748B" font-size="10" text-anchor="middle">Relational Schema</text>
+
+    <g transform="translate(195, 16)">
+      <g transform="translate(0, 0)">
+        <rect width="195" height="76" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="12" y="24" fill="#E2E8F0" font-size="13" font-weight="700">Wells &amp; Trajectories</text>
+        <text x="12" y="44" fill="#8FA0BC" font-size="10">• Surface coordinates</text>
+        <text x="12" y="62" fill="#8FA0BC" font-size="10">• Directional surveys</text>
+      </g>
+      <g transform="translate(210, 0)">
+        <rect width="205" height="76" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="12" y="24" fill="#E2E8F0" font-size="13" font-weight="700">Formations &amp; Depth</text>
+        <text x="12" y="44" fill="#8FA0BC" font-size="10">• Stratigraphic tops/base</text>
+        <text x="12" y="62" fill="#8FA0BC" font-size="10">• Lithology descriptions</text>
+      </g>
+      <g transform="translate(430, 0)">
+        <rect width="195" height="76" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="12" y="24" fill="#E2E8F0" font-size="13" font-weight="700">Historical Events</text>
+        <text x="12" y="44" fill="#8FA0BC" font-size="10">• Mud Loss / Stuck Pipe</text>
+        <text x="12" y="62" fill="#8FA0BC" font-size="10">• Causes &amp; Mitigations</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 4: ACTIVE DRILLING CONTEXT -->
+  <!-- ========================================================================= -->
+  <g transform="translate(980, 425)" filter="url(#boxShadow)">
+    <rect width="840" height="110" rx="8" fill="url(#layerGrad)" stroke="#1E3354" stroke-width="1.2" />
+    
+    <rect x="0" y="0" width="170" height="110" rx="8" fill="#0A1526" />
+    <rect x="162" y="0" width="8" height="110" fill="#0A1526" />
+    <text x="85" y="42" fill="#00E5FF" font-size="12" font-weight="800" letter-spacing="1" text-anchor="middle">LAYER 4</text>
+    <text x="85" y="64" fill="#FFFFFF" font-size="14" font-weight="700" text-anchor="middle">Active Context</text>
+    <text x="85" y="82" fill="#64748B" font-size="10" text-anchor="middle">Current Well State</text>
+
+    <g transform="translate(195, 16)">
+      <g transform="translate(0, 0)">
+        <rect width="195" height="76" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="12" y="24" fill="#E2E8F0" font-size="13" font-weight="700">Target Well &amp; Bit</text>
+        <text x="12" y="44" fill="#8FA0BC" font-size="10">• Target Well (P-01 / X17)</text>
+        <text x="12" y="62" fill="#8FA0BC" font-size="10">• Current Bit Depth (m MD)</text>
+      </g>
+      <g transform="translate(210, 0)">
+        <rect width="205" height="76" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="12" y="24" fill="#E2E8F0" font-size="13" font-weight="700">Telemetry Stream</text>
+        <text x="12" y="44" fill="#8FA0BC" font-size="10">• ROP, Torque, WOB, ECD</text>
+        <text x="12" y="62" fill="#E29578" font-size="10">Simulated demonstration input</text>
+      </g>
+      <g transform="translate(430, 0)">
+        <rect width="195" height="76" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="12" y="24" fill="#00E5FF" font-size="13" font-weight="700">Look-Ahead Window</text>
+        <text x="12" y="44" fill="#8FA0BC" font-size="10">• Depth + 50m to 200m</text>
+        <text x="12" y="62" fill="#8FA0BC" font-size="10">• Configurable interval</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Convergence Arrows from Layer 3 & 4 into Layer 5 -->
+  <g stroke="#00E5FF" stroke-width="1.8" opacity="0.8">
+    <path d="M 520 535 C 520 560, 800 560, 880 575" fill="none" marker-end="url(#arrow)" />
+    <path d="M 1400 535 C 1400 560, 1120 560, 1040 575" fill="none" marker-end="url(#arrow)" />
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 5: NWIS CORRELATION ENGINE -->
+  <!-- ========================================================================= -->
+  <g transform="translate(100, 580)" filter="url(#boxShadow)">
+    <rect width="1720" height="115" rx="8" fill="#101D33" stroke="#00E5FF" stroke-width="1.5" />
+    
+    <rect x="0" y="0" width="170" height="115" rx="8" fill="#0C1526" />
+    <rect x="162" y="0" width="8" height="115" fill="#00E5FF" />
+    <text x="85" y="44" fill="#00E5FF" font-size="12" font-weight="800" letter-spacing="1" text-anchor="middle">LAYER 5</text>
+    <text x="85" y="68" fill="#FFFFFF" font-size="15" font-weight="700" text-anchor="middle">Correlation Engine</text>
+    <text x="85" y="86" fill="#8FA0BC" font-size="10" text-anchor="middle">Heuristic Matching</text>
+
+    <g transform="translate(195, 18)">
+      <g transform="translate(0, 0)">
+        <rect width="280" height="78" rx="6" fill="#152642" stroke="#254370" stroke-width="1" />
+        <text x="14" y="26" fill="#00E5FF" font-size="13" font-weight="700">1. Geospatial Radius</text>
+        <text x="14" y="46" fill="#E2E8F0" font-size="11">Haversine great-circle distance</text>
+        <text x="14" y="64" fill="#8FA0BC" font-size="10">Filters offsets within 1–20 km</text>
+      </g>
+      <g transform="translate(300, 0)">
+        <rect width="300" height="78" rx="6" fill="#152642" stroke="#254370" stroke-width="1" />
+        <text x="14" y="26" fill="#00E5FF" font-size="13" font-weight="700">2. Offset Relevance Scoring</text>
+        <text x="14" y="46" fill="#E2E8F0" font-size="11">Multi-factor heuristic (0–100%)</text>
+        <text x="14" y="64" fill="#8FA0BC" font-size="10">Distance + Formation + Depth + Events</text>
+      </g>
+      <g transform="translate(620, 0)">
+        <rect width="280" height="78" rx="6" fill="#152642" stroke="#254370" stroke-width="1" />
+        <text x="14" y="26" fill="#00E5FF" font-size="13" font-weight="700">3. Depth Correlation</text>
+        <text x="14" y="46" fill="#E2E8F0" font-size="11">Formation boundary alignment</text>
+        <text x="14" y="64" fill="#8FA0BC" font-size="10">Multi-well parameter sync (ROP/Torque)</text>
+      </g>
+      <g transform="translate(920, 0)">
+        <rect width="300" height="78" rx="6" fill="#152642" stroke="#254370" stroke-width="1" />
+        <text x="14" y="26" fill="#E06D53" font-size="13" font-weight="700">4. Look-Ahead Hazard Screening</text>
+        <text x="14" y="46" fill="#E2E8F0" font-size="11">Intersection check [Depth, Depth+Δ]</text>
+        <text x="14" y="64" fill="#8FA0BC" font-size="10">Mud Loss, Stuck Pipe, Kick detection</text>
+      </g>
+      <g transform="translate(1240, 0)">
+        <rect width="260" height="78" rx="6" fill="#152642" stroke="#254370" stroke-width="1" />
+        <text x="14" y="26" fill="#00E5FF" font-size="13" font-weight="700">5. Evidence Retrieval</text>
+        <text x="14" y="46" fill="#E2E8F0" font-size="11">Source DDR page citation</text>
+        <text x="14" y="64" fill="#8FA0BC" font-size="10">Proven mitigation lookup</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Downward Flow Arrows (Layer 5 -> Layer 6) -->
+  <g stroke="#00E5FF" stroke-width="1.8" opacity="0.8">
+    <line x1="960" y1="695" x2="960" y2="725" marker-end="url(#arrow)" />
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 6: ENGINEERING DECISION SUPPORT -->
+  <!-- ========================================================================= -->
+  <g transform="translate(100, 725)" filter="url(#boxShadow)">
+    <rect width="1720" height="115" rx="8" fill="url(#layerGrad)" stroke="#1E3354" stroke-width="1.2" />
+    
+    <rect x="0" y="0" width="170" height="115" rx="8" fill="#0A1526" />
+    <rect x="162" y="0" width="8" height="115" fill="#0A1526" />
+    <text x="85" y="44" fill="#00E5FF" font-size="12" font-weight="800" letter-spacing="1" text-anchor="middle">LAYER 6</text>
+    <text x="85" y="66" fill="#FFFFFF" font-size="14" font-weight="700" text-anchor="middle">Decision Support</text>
+    <text x="85" y="84" fill="#64748B" font-size="10" text-anchor="middle">Outputs &amp; Actions</text>
+
+    <g transform="translate(195, 18)">
+      <g transform="translate(0, 0)">
+        <rect width="235" height="78" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="14" y="26" fill="#E2E8F0" font-size="13" font-weight="700">Ranked Offset Wells</text>
+        <text x="14" y="46" fill="#8FA0BC" font-size="11">Proximity &amp; relevance score</text>
+        <text x="14" y="64" fill="#00E5FF" font-size="10">Itemized justification reasons</text>
+      </g>
+      <g transform="translate(250, 0)">
+        <rect width="255" height="78" rx="6" fill="url(#compGrad)" stroke="#E06D53" stroke-width="1" />
+        <text x="14" y="26" fill="#FF8A73" font-size="13" font-weight="700">Look-Ahead Alerts</text>
+        <text x="14" y="46" fill="#E2E8F0" font-size="11">Pre-spud &amp; drilling warnings</text>
+        <text x="14" y="64" fill="#8FA0BC" font-size="10">Severity (Critical/High/Med)</text>
+      </g>
+      <g transform="translate(520, 0)">
+        <rect width="245" height="78" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="14" y="26" fill="#E2E8F0" font-size="13" font-weight="700">Event Evidence Cards</text>
+        <text x="14" y="46" fill="#8FA0BC" font-size="11">Depth, magnitude, cause</text>
+        <text x="14" y="64" fill="#00E5FF" font-size="10">Direct citation to source DDR</text>
+      </g>
+      <g transform="translate(780, 0)">
+        <rect width="245" height="78" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="14" y="26" fill="#00E5FF" font-size="13" font-weight="700">Mitigation Insights</text>
+        <text x="14" y="46" fill="#E2E8F0" font-size="11">Field-tested LCM pill recipes</text>
+        <text x="14" y="64" fill="#8FA0BC" font-size="10">ECD &amp; connection time limits</text>
+      </g>
+      <g transform="translate(1040, 0)">
+        <rect width="235" height="78" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="14" y="26" fill="#E2E8F0" font-size="13" font-weight="700">Grounded Copilot</text>
+        <text x="14" y="46" fill="#8FA0BC" font-size="11">Context-aware Q&amp;A engine</text>
+        <text x="14" y="64" fill="#00E5FF" font-size="10">Zero-hallucination citations</text>
+      </g>
+      <g transform="translate(1290, 0)">
+        <rect width="215" height="78" rx="6" fill="url(#compGrad)" stroke="#233B61" stroke-width="1" />
+        <text x="14" y="26" fill="#E2E8F0" font-size="13" font-weight="700">Intelligence Brief</text>
+        <text x="14" y="46" fill="#8FA0BC" font-size="11">Structured pre-job report</text>
+        <text x="14" y="64" fill="#8FA0BC" font-size="10">Exportable print summary</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- FUTURE INTEGRATION PATHWAY (eRTMAC & Live WITSML) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(100, 860)">
+    <rect width="1720" height="95" rx="8" fill="url(#futureGrad)" stroke="#9F7AEA" stroke-width="1.5" stroke-dasharray="6,6" />
+    
+    <rect x="24" y="16" width="220" height="24" rx="4" fill="#9F7AEA" fill-opacity="0.2" />
+    <text x="134" y="32" fill="#D6BCFA" font-size="11" font-weight="800" letter-spacing="1.5" text-anchor="middle">FUTURE INTEGRATION PATHWAY</text>
+    
+    <text x="24" y="62" fill="#FFFFFF" font-size="15" font-weight="700">Live eRTMAC &amp; WITSML Operational Data Stream Integration</text>
+    <text x="24" y="82" fill="#CBD5E0" font-size="12">
+      Planned connector to ingest live drilling telemetry (MWD/LWD, Mud Logging gas channels, real-time WITSML depth updates) directly into Layer 4.
+    </text>
+
+    <g transform="translate(1120, 24)">
+      <rect width="270" height="48" rx="5" fill="#20152D" stroke="#6B46C1" stroke-width="1" />
+      <text x="135" y="22" fill="#E9D8FD" font-size="11" font-weight="700" text-anchor="middle">WITSML 1.4 / 2.0 Ingestion Pipeline</text>
+      <text x="135" y="38" fill="#9F7AEA" font-size="10" text-anchor="middle">[PLANNED PRODUCTION CONNECTOR]</text>
+    </g>
+
+    <g transform="translate(1415, 24)">
+      <rect width="280" height="48" rx="5" fill="#20152D" stroke="#6B46C1" stroke-width="1" />
+      <text x="140" y="22" fill="#E9D8FD" font-size="11" font-weight="700" text-anchor="middle">Bi-directional eRTMAC Dashboard Feed</text>
+      <text x="140" y="38" fill="#9F7AEA" font-size="10" text-anchor="middle">[PLANNED MONITORING LAYER]</text>
+    </g>
+  </g>
+
+  <!-- Bottom Technical Integrity Notes -->
+  <g transform="translate(100, 975)">
+    <text x="0" y="0" fill="#4B6382" font-size="11" font-weight="600">TECHNICAL RIGOR NOTE:</text>
+    <text x="160" y="0" fill="#64748B" font-size="11">
+      Current prototype uses explainable heuristic relevance scoring and interval intersection hazard screening. It does not claim deep learning prediction models or autonomous rig control.
+    </text>
+  </g>
+
+  <!-- Footer metadata -->
+  <g transform="translate(100, 1025)">
+    <text x="0" y="0" fill="#4B6382" font-size="13" font-weight="600">SIH 2026 · PROBLEM STATEMENT 26121</text>
+    <text x="960" y="0" fill="#4B6382" font-size="13" text-anchor="middle">eRTMAC-NWIS Complete System Architecture</text>
+    <text x="1720" y="0" fill="#4B6382" font-size="13" font-weight="600" text-anchor="end">SLIDE 4: SYSTEM ARCHITECTURE</text>
+  </g>
+</svg>

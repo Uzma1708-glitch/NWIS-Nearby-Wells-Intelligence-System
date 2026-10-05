@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" style="background:#080E1A; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="solBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070E1A" />
+      <stop offset="50%" stop-color="#0C172A" />
+      <stop offset="100%" stop-color="#060B14" />
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="activeCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142B47" />
+      <stop offset="100%" stop-color="#0F1D33" />
+    </linearGradient>
+    <linearGradient id="offsetCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111D30" />
+      <stop offset="100%" stop-color="#0B1322" />
+    </linearGradient>
+    <linearGradient id="alertCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B283D" />
+      <stop offset="100%" stop-color="#131F33" />
+    </linearGradient>
+
+    <!-- Radar Glow -->
+    <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.15" />
+      <stop offset="70%" stop-color="#00E5FF" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="glowDrop" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#solBg)" />
+
+  <!-- Subtle grid -->
+  <g opacity="0.05" stroke="#4A7BB0" stroke-width="1">
+    <pattern id="grid3" width="60" height="60" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="60" y2="0" />
+      <line x1="0" y1="0" x2="0" y2="60" />
+    </pattern>
+    <rect width="1920" height="1080" fill="url(#grid3)" />
+  </g>
+
+  <!-- Header Section -->
+  <g transform="translate(100, 75)">
+    <rect x="0" y="0" width="160" height="28" rx="4" fill="#00E5FF" fill-opacity="0.12" stroke="#00E5FF" stroke-width="1.2" />
+    <text x="80" y="18" fill="#00E5FF" font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="middle">SOLUTION CONCEPT</text>
+    
+    <text x="0" y="68" fill="#FFFFFF" font-size="38" font-weight="800" letter-spacing="-0.5">NWIS: Context-Aware Offset Well Intelligence</text>
+    <text x="0" y="105" fill="#8FA0BC" font-size="18">
+      "Nearby wells become useful when their historical experience is matched to the active well's current depth and geological formation."
+    </text>
+  </g>
+
+  <!-- Left Side: Geospatial Proximity & Offset Radar Cluster -->
+  <g transform="translate(100, 230)" filter="url(#glowDrop)">
+    <rect width="780" height="570" rx="10" fill="#0A1424" stroke="#1D2E4A" stroke-width="1.5" />
+    
+    <!-- Panel Header -->
+    <rect x="0" y="0" width="780" height="52" rx="10" fill="#0F1B30" />
+    <rect x="0" y="42" width="780" height="10" fill="#0F1B30" />
+    <text x="24" y="32" fill="#E2E8F0" font-size="15" font-weight="700" letter-spacing="0.5">GEOSPATIAL OFFSET CORRIDOR (RADIUS: 5 KM)</text>
+    <text x="756" y="32" fill="#00E5FF" font-size="12" font-weight="700" text-anchor="end">LIVE PROXIMITY INDEX</text>
+
+    <!-- Radar Canvas Area (Center at X: 390, Y: 310) -->
+    <g transform="translate(390, 310)">
+      <!-- Radar range rings -->
+      <circle cx="0" cy="0" r="230" fill="url(#radarGlow)" stroke="#1F3454" stroke-width="1.2" stroke-dasharray="4,4" />
+      <circle cx="0" cy="0" r="160" fill="none" stroke="#253D63" stroke-width="1.2" />
+      <circle cx="0" cy="0" r="90" fill="none" stroke="#2E4C7A" stroke-width="1.2" stroke-dasharray="6,6" />
+      
+      <!-- Crosshairs -->
+      <line x1="-240" y1="0" x2="240" y2="0" stroke="#1B2D47" stroke-width="1" />
+      <line x1="0" y1="-240" x2="0" y2="240" stroke="#1B2D47" stroke-width="1" />
+      
+      <!-- Range Labels -->
+      <text x="96" y="-6" fill="#4B6A96" font-size="11" font-weight="600">2.0 KM</text>
+      <text x="166" y="-6" fill="#4B6A96" font-size="11" font-weight="600">3.5 KM</text>
+      <text x="210" y="-6" fill="#4B6A96" font-size="11" font-weight="600">5.0 KM RADIUS</text>
+
+      <!-- Connection Vectors from Active Well to Offsets -->
+      <line x1="0" y1="0" x2="75" y2="-75" stroke="#00E5FF" stroke-width="1.8" stroke-dasharray="4,4" opacity="0.8" />
+      <line x1="0" y1="0" x2="-120" y2="40" stroke="#3A6B99" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.6" />
+      <line x1="0" y1="0" x2="140" y2="80" stroke="#3A6B99" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.6" />
+      <line x1="0" y1="0" x2="-50" y2="-150" stroke="#3A6B99" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.6" />
+
+      <!-- CENTER: Active Target Well (P-01 / X17) -->
+      <circle cx="0" cy="0" r="26" fill="#00E5FF" fill-opacity="0.15" />
+      <circle cx="0" cy="0" r="14" fill="#00E5FF" />
+      <circle cx="0" cy="0" r="6" fill="#060E18" />
+      
+      <rect x="-80" y="24" width="160" height="42" rx="4" fill="#0E1A2D" stroke="#00E5FF" stroke-width="1.5" />
+      <text x="0" y="42" fill="#00E5FF" font-size="13" font-weight="800" text-anchor="middle">ACTIVE WELL: P-01</text>
+      <text x="0" y="58" fill="#E2E8F0" font-size="11" font-weight="600" text-anchor="middle">BIT DEPTH: 3842m MD · F3</text>
+
+      <!-- OFFSET WELL 1: X12 (Primary Offset - Highest Relevance) -->
+      <g transform="translate(75, -75)">
+        <circle cx="0" cy="0" r="18" fill="#E06D53" fill-opacity="0.2" />
+        <circle cx="0" cy="0" r="10" fill="#E06D53" />
+        <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+        
+        <rect x="14" y="-34" width="170" height="54" rx="4" fill="#141E2F" stroke="#E06D53" stroke-width="1.2" />
+        <text x="24" y="-18" fill="#FFFFFF" font-size="13" font-weight="700">Offset Well: X12</text>
+        <text x="24" y="-4" fill="#E06D53" font-size="10" font-weight="700">2.1 KM AWAY · 88% MATCH</text>
+        <text x="24" y="10" fill="#94A3B8" font-size="10">Mud Loss @ 3845m (25 bbl/hr)</text>
+      </g>
+
+      <!-- OFFSET WELL 2: X09 (Secondary Offset) -->
+      <g transform="translate(-120, 40)">
+        <circle cx="0" cy="0" r="14" fill="#E29578" fill-opacity="0.2" />
+        <circle cx="0" cy="0" r="8" fill="#E29578" />
+        
+        <rect x="-184" y="-20" width="170" height="48" rx="4" fill="#111B2B" stroke="#273C5E" stroke-width="1" />
+        <text x="-174" y="-4" fill="#FFFFFF" font-size="12" font-weight="700">Offset Well: X09</text>
+        <text x="-174" y="10" fill="#00E5FF" font-size="10" font-weight="600">3.8 KM AWAY · 74% MATCH</text>
+        <text x="-174" y="22" fill="#8FA0BC" font-size="9">Torque Spike @ 3862m</text>
+      </g>
+
+      <!-- OFFSET WELL 3: X21 (Stuck Pipe Offset) -->
+      <g transform="translate(140, 80)">
+        <circle cx="0" cy="0" r="14" fill="#E29578" fill-opacity="0.2" />
+        <circle cx="0" cy="0" r="8" fill="#E29578" />
+        
+        <rect x="14" y="-10" width="170" height="48" rx="4" fill="#111B2B" stroke="#273C5E" stroke-width="1" />
+        <text x="24" y="6" fill="#FFFFFF" font-size="12" font-weight="700">Offset Well: X21</text>
+        <text x="24" y="20" fill="#00E5FF" font-size="10" font-weight="600">4.5 KM AWAY · 68% MATCH</text>
+        <text x="24" y="32" fill="#8FA0BC" font-size="9">Stuck Pipe @ 3858m (28h NPT)</text>
+      </g>
+
+      <!-- OFFSET WELL 4: X07 (Distant Offset) -->
+      <g transform="translate(-50, -150)">
+        <circle cx="0" cy="0" r="12" fill="#718096" fill-opacity="0.2" />
+        <circle cx="0" cy="0" r="7" fill="#718096" />
+        
+        <rect x="-160" y="-30" width="150" height="42" rx="4" fill="#111B2B" stroke="#273C5E" stroke-width="1" />
+        <text x="-150" y="-14" fill="#CBD5E1" font-size="12" font-weight="600">Offset Well: X07</text>
+        <text x="-150" y="0" fill="#94A3B8" font-size="10">5.2 KM AWAY · 52% MATCH</text>
+      </g>
+    </g>
+
+    <!-- Radar Legend / Footnote -->
+    <rect x="24" y="525" width="732" height="30" rx="4" fill="#0E192B" />
+    <text x="36" y="545" fill="#8FA0BC" font-size="11">
+      <tspan fill="#00E5FF" font-weight="700">● Active Well</tspan> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      <tspan fill="#E06D53" font-weight="700">● Critical Offset Hazard</tspan> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      <tspan fill="#E29578" font-weight="700">● Moderate Offset Hazard</tspan> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      <tspan fill="#718096">● Distant Offset</tspan>
+    </text>
+  </g>
+
+  <!-- Center Bridge: Matching Engine Logic -->
+  <g transform="translate(905, 410)">
+    <!-- Transfer Vector Box -->
+    <rect x="0" y="0" width="130" height="210" rx="8" fill="#101D33" stroke="#00E5FF" stroke-width="1.2" stroke-dasharray="4,4" />
+    <text x="65" y="32" fill="#00E5FF" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="1">NWIS ENGINE</text>
+    
+    <text x="65" y="70" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">Distance</text>
+    <text x="65" y="86" fill="#8FA0BC" font-size="10" text-anchor="middle">Haversine (km)</text>
+
+    <path d="M45 100 h40 M65 95 v10" stroke="#00E5FF" stroke-width="1.5" />
+
+    <text x="65" y="125" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">Stratigraphy</text>
+    <text x="65" y="141" fill="#8FA0BC" font-size="10" text-anchor="middle">Formation F3 Match</text>
+
+    <path d="M45 155 h40 M65 150 v10" stroke="#00E5FF" stroke-width="1.5" />
+
+    <text x="65" y="180" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">Depth Window</text>
+    <text x="65" y="196" fill="#8FA0BC" font-size="10" text-anchor="middle">±100m Look-Ahead</text>
+  </g>
+
+  <!-- Right Side: Surfaced Decision Support Intelligence -->
+  <g transform="translate(1060, 230)" filter="url(#glowDrop)">
+    <rect width="760" height="570" rx="10" fill="#0A1424" stroke="#1D2E4A" stroke-width="1.5" />
+    
+    <rect x="0" y="0" width="760" height="52" rx="10" fill="#0F1B30" />
+    <rect x="0" y="42" width="760" height="10" fill="#0F1B30" />
+    <text x="24" y="32" fill="#E2E8F0" font-size="15" font-weight="700" letter-spacing="0.5">SURFACED OFFSET KNOWLEDGE &amp; MITIGATION</text>
+    <text x="736" y="32" fill="#00E5FF" font-size="12" font-weight="700" text-anchor="end">DECISION SUPPORT</text>
+
+    <!-- Card 1: Proactive Hazard Warning -->
+    <g transform="translate(24, 75)">
+      <rect width="712" height="135" rx="8" fill="#1C1822" stroke="#E06D53" stroke-width="1.5" />
+      <rect x="0" y="0" width="8" height="135" rx="4" fill="#E06D53" />
+      
+      <text x="24" y="32" fill="#FF8A73" font-size="14" font-weight="800" letter-spacing="1">PROACTIVE HAZARD SCREENING · LOOK-AHEAD (3842m – 3950m)</text>
+      <text x="24" y="60" fill="#FFFFFF" font-size="16" font-weight="700">Approaching High-Loss Fracture Zone Recorded in Offset X12</text>
+      <text x="24" y="85" fill="#CBD5E1" font-size="13">
+        Offset X12 (2.1 km away) penetrated this exact F3 transition at 3845m and suffered total mud loss of 25 bbl/hr.
+      </text>
+      <text x="24" y="112" fill="#8FA0BC" font-size="12">
+        Contributing Evidence: <tspan fill="#00E5FF" font-weight="600">DDR_X12_3845.pdf (Page 4, Section 6)</tspan> &nbsp;|&nbsp; Severity: <tspan fill="#E06D53" font-weight="700">HIGH (96% Confidence)</tspan>
+      </text>
+    </g>
+
+    <!-- Card 2: Verified Historical Mitigation Recommendation -->
+    <g transform="translate(24, 230)">
+      <rect width="712" height="145" rx="8" fill="#102033" stroke="#25476D" stroke-width="1.2" />
+      <rect x="0" y="0" width="8" height="145" rx="4" fill="#00E5FF" />
+      
+      <text x="24" y="32" fill="#00E5FF" font-size="14" font-weight="800" letter-spacing="1">EVIDENCE-BACKED MITIGATION INSIGHT</text>
+      <text x="24" y="60" fill="#FFFFFF" font-size="15" font-weight="700">Recommended Pre-Treatment Action for Active Well P-01:</text>
+      <text x="24" y="88" fill="#93C5FD" font-size="13" font-weight="600">
+        • Pre-mix 50-bbl granular LCM pill (mixed coarse/medium) on surface before drilling past 3840m.
+      </text>
+      <text x="24" y="110" fill="#93C5FD" font-size="13" font-weight="600">
+        • Lower mud pump flow rate to 1400 lpm to control downhole ECD below 1.08 sg.
+      </text>
+      <text x="24" y="130" fill="#64748B" font-size="11">
+        Proven Result: Full returns restored in X12 after LCM pill &amp; ECD control without sidetrack.
+      </text>
+    </g>
+
+    <!-- Card 3: Construction & Parameter Precedent -->
+    <g transform="translate(24, 395)">
+      <rect width="712" height="150" rx="8" fill="#0E1829" stroke="#1D2E4A" stroke-width="1.2" />
+      <text x="24" y="30" fill="#CBD5E1" font-size="14" font-weight="700">Technical Well Construction Precedents from Nearby Offsets</text>
+      
+      <g transform="translate(24, 50)">
+        <!-- Metric 1 -->
+        <rect width="210" height="80" rx="6" fill="#132035" />
+        <text x="16" y="24" fill="#8FA0BC" font-size="11">CASING PRECEDENT</text>
+        <text x="16" y="48" fill="#FFFFFF" font-size="15" font-weight="800">9-5/8" at 3290m</text>
+        <text x="16" y="68" fill="#00E5FF" font-size="11">L80 Grade / BTC Connection</text>
+      </g>
+      
+      <g transform="translate(250, 50)">
+        <!-- Metric 2 -->
+        <rect width="210" height="80" rx="6" fill="#132035" />
+        <text x="16" y="24" fill="#8FA0BC" font-size="11">MUD WEIGHT REGIME</text>
+        <text x="16" y="48" fill="#FFFFFF" font-size="15" font-weight="800">1.10 – 1.12 sg</text>
+        <text x="16" y="68" fill="#00E5FF" font-size="11">OBM with 3% Lubricant</text>
+      </g>
+      
+      <g transform="translate(476, 50)">
+        <!-- Metric 3 -->
+        <rect width="210" height="80" rx="6" fill="#132035" />
+        <text x="16" y="24" fill="#8FA0BC" font-size="11">STANDSTILL LIMIT</text>
+        <text x="16" y="48" fill="#FFFFFF" font-size="15" font-weight="800">&lt; 10 Minutes</text>
+        <text x="16" y="68" fill="#E06D53" font-size="11">Prevents Differential Sticking</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Principle & Boundary Banner -->
+  <g transform="translate(100, 830)" filter="url(#glowDrop)">
+    <rect width="1720" height="80" rx="8" fill="#0C172B" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.3" />
+    <circle cx="45" cy="40" r="16" fill="#00E5FF" fill-opacity="0.15" />
+    <path d="M45 28 v16 M45 48 v2" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" />
+    
+    <text x="80" y="34" fill="#E2E8F0" font-size="15" font-weight="700">TECHNICAL BOUNDARY &amp; PURPOSE:</text>
+    <text x="80" y="56" fill="#8FA0BC" font-size="13">
+      NWIS provides <tspan fill="#00E5FF" font-weight="700">decision support and situational awareness</tspan> to engineers and supervisors. It evaluates historical precedents and mitigations — <tspan fill="#FFFFFF" font-weight="600">it does not autonomously steer or control the drilling rig.</tspan>
+    </text>
+  </g>
+
+  <!-- Footer metadata -->
+  <g transform="translate(100, 1020)">
+    <text x="0" y="0" fill="#4B6382" font-size="13" font-weight="600">SIH 2026 · PROBLEM STATEMENT 26121</text>
+    <text x="960" y="0" fill="#4B6382" font-size="13" text-anchor="middle">eRTMAC-NWIS Solution Concept Architecture</text>
+    <text x="1720" y="0" fill="#4B6382" font-size="13" font-weight="600" text-anchor="end">SLIDE 3: SOLUTION CONCEPT</text>
+  </g>
+</svg>

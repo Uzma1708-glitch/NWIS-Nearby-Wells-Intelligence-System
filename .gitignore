@@ -1,0 +1,56 @@
+# Environment variables and secrets
+
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Python
+
+**pycache**/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# Node.js
+
+node_modules/
+dist/
+build/
+.vite/
+
+# Local databases
+
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+
+*.log
+logs/
+
+# Operating system
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+
+.vscode/
+.idea/
+
+# Temporary files
+
+scratch/
+*.tmp
+*.bak
+
+# Local deployment files
+
+.vercel/

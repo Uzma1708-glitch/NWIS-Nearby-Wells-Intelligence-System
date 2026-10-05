@@ -1,0 +1,653 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060B14"/>
+      <stop offset="50%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#080E1C"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14213D" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0D1629" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="cardActiveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A2D54" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0F1F3D" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#00A3FF"/>
+    </linearGradient>
+
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FF6F00"/>
+    </linearGradient>
+
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#D32F2F"/>
+    </linearGradient>
+
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E676"/>
+      <stop offset="100%" stop-color="#00B0FF"/>
+    </linearGradient>
+
+    <!-- Drop Shadows & Glows -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#00E5FF" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+
+    <!-- Arrow Marker -->
+    <marker id="cyanArrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M 1 1 L 6 4 L 1 7 Z" fill="#00E5FF"/>
+    </marker>
+  </defs>
+
+  <style>
+    .font-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace; }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <rect width="1920" height="1080" fill="url(#gridPattern)"/>
+
+  <!-- Subtle ambient decorative glow rings -->
+  <circle cx="200" cy="540" r="350" fill="#00E5FF" opacity="0.02" filter="blur(60px)"/>
+  <circle cx="960" cy="540" r="450" fill="#0077B6" opacity="0.025" filter="blur(80px)"/>
+  <circle cx="1720" cy="540" r="350" fill="#00E676" opacity="0.02" filter="blur(60px)"/>
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <g transform="translate(80, 55)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="440" height="28" rx="14" fill="#1E293B" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+    <circle cx="14" cy="14" r="5" fill="#00E5FF"/>
+    <text x="28" y="19" class="font-mono" font-size="11" font-weight="700" fill="#00E5FF" letter-spacing="1.5">END-TO-END OPERATIONAL WORKFLOW PIPELINE</text>
+
+    <!-- Main Title -->
+    <text x="0" y="70" class="font-sans" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">NWIS Drilling Engineer Decision Support Workflow</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="102" class="font-sans" font-size="16" font-weight="400" fill="#94A3B8">
+      A systematic 7-stage pipeline transforming raw historical offset-well records into real-time, depth-aware drilling hazard advisories.
+    </text>
+
+    <!-- Prototype Transparency Badge (Right-aligned) -->
+    <g transform="translate(1360, 15)">
+      <rect x="0" y="0" width="400" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <circle cx="24" cy="24" r="6" fill="#38BDF8"/>
+      <text x="40" y="21" class="font-mono" font-size="11" font-weight="700" fill="#E2E8F0">HEURISTIC CORRELATION &amp; OCR PIPELINE</text>
+      <text x="40" y="37" class="font-sans" font-size="10.5" fill="#94A3B8">Engineering Decision-Support • Advisory Only • Non-Autonomous</text>
+    </g>
+  </g>
+
+  <!-- ==================== PIPELINE CONNECTOR RAIL ==================== -->
+  <g transform="translate(80, 205)">
+    <!-- Base track line -->
+    <line x1="30" y1="20" x2="1730" y2="20" stroke="#1E293B" stroke-width="4" stroke-linecap="round"/>
+    <!-- Active progress pulse -->
+    <line x1="30" y1="20" x2="1730" y2="20" stroke="url(#cyanGrad)" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+  </g>
+
+  <!-- ==================== SEVEN HORIZONTAL WORKFLOW CARDS ==================== -->
+  <!-- Card Width: 226px, Gap: 29.3px -> Total 7 * 226 + 6 * 29.3 = 1582 + 176 = 1758px -->
+
+  <!-- ==================== STEP 1: CONTEXT INITIALIZATION ==================== -->
+  <g transform="translate(80, 240)">
+    <!-- Step Badge on Rail -->
+    <circle cx="113" cy="-15" r="18" fill="#0B132B" stroke="#00E5FF" stroke-width="2"/>
+    <text x="113" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#00E5FF" text-anchor="middle">01</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="226" height="520" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <!-- Top accent border -->
+    <rect x="1" y="16" width="224" height="4" rx="2" fill="#00E5FF"/>
+
+    <!-- Card Header -->
+    <g transform="translate(18, 42)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#38BDF8" letter-spacing="1">STAGE 01</text>
+      <text y="22" class="font-sans" font-size="17" font-weight="700" fill="#FFFFFF">Select Active Context</text>
+      <text y="40" class="font-sans" font-size="12" font-weight="500" fill="#64748B">Well &amp; Rig State Setup</text>
+    </g>
+
+    <!-- Graphic Box / Diagram -->
+    <g transform="translate(18, 102)">
+      <rect width="190" height="96" rx="8" fill="#090E17" stroke="#1E293B" stroke-width="1"/>
+      <!-- Rig graphic sketch -->
+      <path d="M 45 76 L 60 25 L 75 76 Z" fill="none" stroke="#00E5FF" stroke-width="1.8"/>
+      <line x1="50" y1="52" x2="70" y2="52" stroke="#00E5FF" stroke-width="1.2"/>
+      <line x1="60" y1="25" x2="60" y2="18" stroke="#00E5FF" stroke-width="2"/>
+      <!-- Drill string -->
+      <line x1="60" y1="76" x2="60" y2="88" stroke="#FFB300" stroke-width="2" stroke-dasharray="3 2"/>
+      <!-- Coordinates/Depth badge -->
+      <g transform="translate(90, 22)">
+        <text class="font-mono" font-size="9" fill="#64748B">TARGET ID</text>
+        <text y="14" class="font-mono" font-size="13" font-weight="700" fill="#38BDF8">Well P-01</text>
+        <text y="30" class="font-mono" font-size="9" fill="#64748B">CURRENT BIT DEPTH</text>
+        <text y="44" class="font-mono" font-size="13" font-weight="700" fill="#FFB300">3,842 m</text>
+        <text y="58" class="font-mono" font-size="9.5" fill="#94A3B8">Formation: F3 Sand</text>
+      </g>
+    </g>
+
+    <!-- Detailed Workflow Description -->
+    <g transform="translate(18, 220)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#94A3B8">OPERATIONAL ACTIONS</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Initialize Drilling Session</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Drilling engineer selects target wellbore coordinates and spud metadata.</text>
+      </g>
+
+      <g transform="translate(0, 66)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Ingest Current Bit Depth</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Read active depth (3,842m MD) via demo telemetry or manual depth slider.</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Define Look-Ahead Span</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Configure screening window (e.g. +100m interval: 3,842m to 3,942m).</text>
+      </g>
+    </g>
+
+    <!-- Output Pill -->
+    <g transform="translate(18, 475)">
+      <rect width="190" height="38" rx="6" fill="#0B1528" stroke="#1E3A8A" stroke-width="1"/>
+      <text x="10" y="16" class="font-mono" font-size="9" fill="#38BDF8">OUTPUT CONTEXT</text>
+      <text x="10" y="30" class="font-sans" font-size="11" font-weight="600" fill="#FFFFFF">Active Datum &amp; Bit State</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 1->2 -->
+  <path d="M 314 500 L 328 500" stroke="#00E5FF" stroke-width="2" marker-end="url(#cyanArrow)"/>
+
+  <!-- ==================== STEP 2: GEOSPATIAL FILTERING ==================== -->
+  <g transform="translate(335, 240)">
+    <!-- Step Badge on Rail -->
+    <circle cx="113" cy="-15" r="18" fill="#0B132B" stroke="#00E5FF" stroke-width="2"/>
+    <text x="113" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#00E5FF" text-anchor="middle">02</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="226" height="520" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect x="1" y="16" width="224" height="4" rx="2" fill="#00E5FF"/>
+
+    <!-- Card Header -->
+    <g transform="translate(18, 42)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#38BDF8" letter-spacing="1">STAGE 02</text>
+      <text y="22" class="font-sans" font-size="17" font-weight="700" fill="#FFFFFF">Identify Offset Wells</text>
+      <text y="40" class="font-sans" font-size="12" font-weight="500" fill="#64748B">Geospatial Radius Search</text>
+    </g>
+
+    <!-- Graphic Box / Diagram: Spatial Radar -->
+    <g transform="translate(18, 102)">
+      <rect width="190" height="96" rx="8" fill="#090E17" stroke="#1E293B" stroke-width="1"/>
+      <g transform="translate(95, 48)">
+        <!-- Concentric rings -->
+        <circle r="36" fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="2 2"/>
+        <circle r="22" fill="none" stroke="#00E5FF" stroke-width="1.2" stroke-dasharray="3 3"/>
+        <circle r="8" fill="#00E5FF" fill-opacity="0.2"/>
+        <!-- Active well center -->
+        <circle r="4" fill="#00E5FF"/>
+        <!-- Candidate offset dots -->
+        <circle cx="-16" cy="-12" r="3.5" fill="#38BDF8"/>
+        <text x="-24" y="-14" class="font-mono" font-size="7" fill="#94A3B8">X12</text>
+
+        <circle cx="18" cy="14" r="3.5" fill="#38BDF8"/>
+        <text x="24" y="16" class="font-mono" font-size="7" fill="#94A3B8">X09</text>
+
+        <circle cx="28" cy="-18" r="3" fill="#64748B"/>
+        <text x="32" y="-18" class="font-mono" font-size="7" fill="#64748B">X21</text>
+        <!-- Excluded outside dot -->
+        <circle cx="-32" cy="24" r="2.5" fill="#DC2626"/>
+      </g>
+      <text x="8" y="88" class="font-mono" font-size="9" fill="#00E5FF">Haversine Radius: 5.0 km</text>
+    </g>
+
+    <!-- Detailed Workflow Description -->
+    <g transform="translate(18, 220)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#94A3B8">OPERATIONAL ACTIONS</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Haversine Spatial Query</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Executes geodesic distance filter against historical wellbore coordinate repository.</text>
+      </g>
+
+      <g transform="translate(0, 66)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Radius Slider Calibration</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Engineer dynamically adjusts search buffer between 1 km and 20 km.</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Candidate Pool Isolation</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Filters hundreds of regional basin boreholes down to actionable offset cluster.</text>
+      </g>
+    </g>
+
+    <!-- Output Pill -->
+    <g transform="translate(18, 475)">
+      <rect width="190" height="38" rx="6" fill="#0B1528" stroke="#1E3A8A" stroke-width="1"/>
+      <text x="10" y="16" class="font-mono" font-size="9" fill="#38BDF8">OUTPUT CANDIDATES</text>
+      <text x="10" y="30" class="font-sans" font-size="11" font-weight="600" fill="#FFFFFF">Candidate Offset Wells (N=5)</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 2->3 -->
+  <path d="M 569 500 L 583 500" stroke="#00E5FF" stroke-width="2" marker-end="url(#cyanArrow)"/>
+
+  <!-- ==================== STEP 3: RELEVANCE RANKING ==================== -->
+  <g transform="translate(590, 240)">
+    <!-- Step Badge on Rail -->
+    <circle cx="113" cy="-15" r="18" fill="#0B132B" stroke="#00E5FF" stroke-width="2"/>
+    <text x="113" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#00E5FF" text-anchor="middle">03</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="226" height="520" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect x="1" y="16" width="224" height="4" rx="2" fill="#00E5FF"/>
+
+    <!-- Card Header -->
+    <g transform="translate(18, 42)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#38BDF8" letter-spacing="1">STAGE 03</text>
+      <text y="22" class="font-sans" font-size="17" font-weight="700" fill="#FFFFFF">Rank Offset Relevance</text>
+      <text y="40" class="font-sans" font-size="12" font-weight="500" fill="#64748B">Multi-Factor Heuristic</text>
+    </g>
+
+    <!-- Graphic Box / Diagram: Scoring Bars -->
+    <g transform="translate(18, 102)">
+      <rect width="190" height="96" rx="8" fill="#090E17" stroke="#1E293B" stroke-width="1"/>
+      <!-- Mini Ranked List -->
+      <g transform="translate(12, 18)">
+        <text class="font-mono" font-size="9" font-weight="700" fill="#E2E8F0">1. Well X12 (2.1 km)</text>
+        <rect x="0" y="6" width="120" height="6" rx="3" fill="#1E293B"/>
+        <rect x="0" y="6" width="112" height="6" rx="3" fill="url(#cyanGrad)"/>
+        <text x="130" y="12" class="font-mono" font-size="9" font-weight="700" fill="#00E5FF">94.2%</text>
+
+        <text y="28" class="font-mono" font-size="9" font-weight="700" fill="#94A3B8">2. Well X09 (3.8 km)</text>
+        <rect x="0" y="34" width="120" height="6" rx="3" fill="#1E293B"/>
+        <rect x="0" y="34" width="98" height="6" rx="3" fill="#38BDF8"/>
+        <text x="130" y="40" class="font-mono" font-size="9" font-weight="700" fill="#38BDF8">88.5%</text>
+
+        <text y="56" class="font-mono" font-size="9" font-weight="700" fill="#64748B">3. Well X21 (4.6 km)</text>
+        <rect x="0" y="62" width="120" height="6" rx="3" fill="#1E293B"/>
+        <rect x="0" y="62" width="76" height="6" rx="3" fill="#64748B"/>
+        <text x="130" y="68" class="font-mono" font-size="9" font-weight="700" fill="#94A3B8">76.1%</text>
+      </g>
+    </g>
+
+    <!-- Detailed Workflow Description -->
+    <g transform="translate(18, 220)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#94A3B8">OPERATIONAL ACTIONS</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Heuristic Weighting</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Evaluates Proximity (40%), Stratigraphy (30%), Depth (15%), Incidents (15%).</text>
+      </g>
+
+      <g transform="translate(0, 66)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Sort Priority Offset Wells</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Ranks high-impact offsets above distant or structurally disparate boreholes.</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Transparent Scoring Math</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Inspectable weighted sum prevents black-box confusion for drilling teams.</text>
+      </g>
+    </g>
+
+    <!-- Output Pill -->
+    <g transform="translate(18, 475)">
+      <rect width="190" height="38" rx="6" fill="#0B1528" stroke="#1E3A8A" stroke-width="1"/>
+      <text x="10" y="16" class="font-mono" font-size="9" fill="#38BDF8">RANKED PRIORITIES</text>
+      <text x="10" y="30" class="font-sans" font-size="11" font-weight="600" fill="#FFFFFF">Ordered Offset Hierarchy</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 3->4 -->
+  <path d="M 824 500 L 838 500" stroke="#00E5FF" stroke-width="2" marker-end="url(#cyanArrow)"/>
+
+  <!-- ==================== STEP 4: STRATIGRAPHIC CORRELATION ==================== -->
+  <g transform="translate(845, 240)">
+    <!-- Step Badge on Rail -->
+    <circle cx="113" cy="-15" r="18" fill="#0B132B" stroke="#00E5FF" stroke-width="2"/>
+    <text x="113" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#00E5FF" text-anchor="middle">04</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="226" height="520" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect x="1" y="16" width="224" height="4" rx="2" fill="#00E5FF"/>
+
+    <!-- Card Header -->
+    <g transform="translate(18, 42)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#38BDF8" letter-spacing="1">STAGE 04</text>
+      <text y="22" class="font-sans" font-size="17" font-weight="700" fill="#FFFFFF">Depth &amp; Formation</text>
+      <text y="40" class="font-sans" font-size="12" font-weight="500" fill="#64748B">Stratigraphic Alignment</text>
+    </g>
+
+    <!-- Graphic Box / Diagram: Multi-well log tracks -->
+    <g transform="translate(18, 102)">
+      <rect width="190" height="96" rx="8" fill="#090E17" stroke="#1E293B" stroke-width="1"/>
+      <g transform="translate(15, 12)">
+        <!-- Formation color bands -->
+        <rect x="0" y="0" width="160" height="18" fill="#2E4057" fill-opacity="0.3"/>
+        <rect x="0" y="20" width="160" height="22" fill="#475569" fill-opacity="0.3"/>
+        <rect x="0" y="44" width="160" height="24" fill="#0F766E" fill-opacity="0.3"/>
+
+        <!-- Subsurface formation markers -->
+        <line x1="0" y1="20" x2="160" y2="20" stroke="#475569" stroke-width="1"/>
+        <line x1="0" y1="44" x2="160" y2="44" stroke="#00E5FF" stroke-width="1" stroke-dasharray="3 2"/>
+
+        <!-- 3 wellbores -->
+        <line x1="30" y1="0" x2="30" y2="68" stroke="#38BDF8" stroke-width="1.8"/>
+        <text x="24" y="-3" class="font-mono" font-size="7" fill="#38BDF8">X12</text>
+
+        <line x1="80" y1="0" x2="80" y2="52" stroke="#00E5FF" stroke-width="2.5"/>
+        <polygon points="77,52 83,52 80,58" fill="#FFB300"/>
+        <text x="74" y="-3" class="font-mono" font-size="7" fill="#00E5FF">P-01★</text>
+
+        <line x1="130" y1="0" x2="130" y2="68" stroke="#94A3B8" stroke-width="1.8"/>
+        <text x="124" y="-3" class="font-mono" font-size="7" fill="#94A3B8">X09</text>
+
+        <!-- Formation labels -->
+        <text x="2" y="14" class="font-mono" font-size="7" fill="#94A3B8">F2 Shale</text>
+        <text x="2" y="36" class="font-mono" font-size="7" fill="#00E5FF">F3 Sandstone</text>
+      </g>
+    </g>
+
+    <!-- Detailed Workflow Description -->
+    <g transform="translate(18, 220)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#94A3B8">OPERATIONAL ACTIONS</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">True Vertical Depth Sync</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Normalizes Measured Depth (MD) to True Vertical Depth (TVD) across wells.</text>
+      </g>
+
+      <g transform="translate(0, 66)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Lithology Horizon Matching</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Correlates formation tops (F1, F2, F3) across regional structural strike &amp; dip.</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Multi-Well Track Overlay</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Compares rate of penetration (ROP), torque, and mud weight trends.</text>
+      </g>
+    </g>
+
+    <!-- Output Pill -->
+    <g transform="translate(18, 475)">
+      <rect width="190" height="38" rx="6" fill="#0B1528" stroke="#1E3A8A" stroke-width="1"/>
+      <text x="10" y="16" class="font-mono" font-size="9" fill="#38BDF8">STRATIGRAPHIC BASELINE</text>
+      <text x="10" y="30" class="font-sans" font-size="11" font-weight="600" fill="#FFFFFF">Cross-Well Depth Datum</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 4->5 -->
+  <path d="M 1079 500 L 1093 500" stroke="#00E5FF" stroke-width="2" marker-end="url(#cyanArrow)"/>
+
+  <!-- ==================== STEP 5: LOOK-AHEAD HAZARD SCREENING ==================== -->
+  <g transform="translate(1100, 240)">
+    <!-- Step Badge on Rail -->
+    <circle cx="113" cy="-15" r="18" fill="#0B132B" stroke="#FF5252" stroke-width="2"/>
+    <text x="113" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#FF5252" text-anchor="middle">05</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="226" height="520" rx="12" fill="url(#cardGrad)" stroke="#EF4444" stroke-width="1.8" stroke-opacity="0.8" filter="url(#cardShadow)"/>
+    <rect x="1" y="16" width="224" height="4" rx="2" fill="url(#redGrad)"/>
+
+    <!-- Card Header -->
+    <g transform="translate(18, 42)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#FF5252" letter-spacing="1">STAGE 05</text>
+      <text y="22" class="font-sans" font-size="17" font-weight="700" fill="#FFFFFF">Hazard Screening</text>
+      <text y="40" class="font-sans" font-size="12" font-weight="500" fill="#F87171">Look-Ahead Interval Scan</text>
+    </g>
+
+    <!-- Graphic Box / Diagram: Look-Ahead Cone -->
+    <g transform="translate(18, 102)">
+      <rect width="190" height="96" rx="8" fill="#1C1014" stroke="#7F1D1D" stroke-width="1"/>
+      <g transform="translate(15, 14)">
+        <rect x="0" y="0" width="160" height="24" rx="4" fill="#0F172A" stroke="#334155" stroke-width="0.8"/>
+        <text x="8" y="16" class="font-mono" font-size="9" fill="#94A3B8">Bit: 3,842m</text>
+        <text x="90" y="16" class="font-mono" font-size="9" fill="#00E5FF">+100m Window</text>
+
+        <!-- Projected Hazard Zone -->
+        <rect x="0" y="32" width="160" height="38" rx="4" fill="#7F1D1D" fill-opacity="0.4" stroke="#EF4444" stroke-width="1" stroke-dasharray="3 2"/>
+        <path d="M 12 51 L 22 35 L 32 51 Z" fill="#EF4444"/>
+        <text x="20" y="49" class="font-sans" font-size="10" font-weight="900" fill="#FFFFFF">!</text>
+        <text x="38" y="44" class="font-mono" font-size="9" font-weight="700" fill="#FFA4A4">SEVE LOSS @ 3,845m</text>
+        <text x="38" y="58" class="font-mono" font-size="8" fill="#FCA5A5">Offset X12 • 45 bbls/hr</text>
+      </g>
+    </g>
+
+    <!-- Detailed Workflow Description -->
+    <g transform="translate(18, 220)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#F87171">OPERATIONAL ACTIONS</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="4" cy="5" r="2.5" fill="#FF5252"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Project Forward Window</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Scans 50m to 200m ahead of active bit into uncharted immediate depth.</text>
+      </g>
+
+      <g transform="translate(0, 66)">
+        <circle cx="4" cy="5" r="2.5" fill="#FF5252"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Correlate Historical Events</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Identifies kicks, severe losses, tight holes, and stuck pipe occurrences in offset wells.</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <circle cx="4" cy="5" r="2.5" fill="#FF5252"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Severity Level Flagging</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Categorizes historical events into Low, Medium, High, and Critical alert tiers.</text>
+      </g>
+    </g>
+
+    <!-- Output Pill -->
+    <g transform="translate(18, 475)">
+      <rect width="190" height="38" rx="6" fill="#2C0F14" stroke="#DC2626" stroke-width="1"/>
+      <text x="10" y="16" class="font-mono" font-size="9" fill="#F87171">SURFACED HAZARD</text>
+      <text x="10" y="30" class="font-sans" font-size="11" font-weight="700" fill="#FFA4A4">High Loss Risk (3,845m)</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 5->6 -->
+  <path d="M 1334 500 L 1348 500" stroke="#00E5FF" stroke-width="2" marker-end="url(#cyanArrow)"/>
+
+  <!-- ==================== STEP 6: EVIDENCE RETRIEVAL ==================== -->
+  <g transform="translate(1355, 240)">
+    <!-- Step Badge on Rail -->
+    <circle cx="113" cy="-15" r="18" fill="#0B132B" stroke="#00E5FF" stroke-width="2"/>
+    <text x="113" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#00E5FF" text-anchor="middle">06</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="226" height="520" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect x="1" y="16" width="224" height="4" rx="2" fill="#00E5FF"/>
+
+    <!-- Card Header -->
+    <g transform="translate(18, 42)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#38BDF8" letter-spacing="1">STAGE 06</text>
+      <text y="22" class="font-sans" font-size="17" font-weight="700" fill="#FFFFFF">Evidence Retrieval</text>
+      <text y="40" class="font-sans" font-size="12" font-weight="500" fill="#64748B">DDR &amp; WCR Verification</text>
+    </g>
+
+    <!-- Graphic Box / Diagram: Document Snippet -->
+    <g transform="translate(18, 102)">
+      <rect width="190" height="96" rx="8" fill="#090E17" stroke="#1E293B" stroke-width="1"/>
+      <g transform="translate(12, 14)">
+        <rect x="0" y="0" width="166" height="68" rx="4" fill="#131D31" stroke="#334155" stroke-width="0.8"/>
+        <!-- Doc header -->
+        <text x="8" y="14" class="font-mono" font-size="8" font-weight="700" fill="#38BDF8">OIL_X12_DDR_42.PDF</text>
+        <line x1="8" y1="20" x2="158" y2="20" stroke="#334155" stroke-width="0.8"/>
+        <!-- Highlighted snippet -->
+        <rect x="8" y="24" width="150" height="24" fill="#00E5FF" fill-opacity="0.1" stroke="#00E5FF" stroke-width="0.5"/>
+        <text x="12" y="34" class="font-sans" font-size="7.5" fill="#E2E8F0">"Observed 45 bbl/hr mud loss</text>
+        <text x="12" y="44" class="font-sans" font-size="7.5" fill="#E2E8F0">at 3,845m in fractured basalt..."</text>
+        <text x="8" y="60" class="font-mono" font-size="8" fill="#10B981">✓ Mitigation: 30 bbl LCM pill</text>
+      </g>
+    </g>
+
+    <!-- Detailed Workflow Description -->
+    <g transform="translate(18, 220)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#94A3B8">OPERATIONAL ACTIONS</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Unpack Daily Reports (DDR)</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Extracts exact historical text, operator shift notes, and rig remarks.</text>
+      </g>
+
+      <g transform="translate(0, 66)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Isolate Root Cause</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Surfaces mechanical or geologic origins (e.g. natural fracture network vs surge pressure).</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E5FF"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Extract Verified Mitigations</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Retrieves successful remedies applied by previous drilling teams.</text>
+      </g>
+    </g>
+
+    <!-- Output Pill -->
+    <g transform="translate(18, 475)">
+      <rect width="190" height="38" rx="6" fill="#0B1528" stroke="#1E3A8A" stroke-width="1"/>
+      <text x="10" y="16" class="font-mono" font-size="9" fill="#38BDF8">SOURCE EVIDENCE</text>
+      <text x="10" y="30" class="font-sans" font-size="11" font-weight="600" fill="#FFFFFF">Traceable Historical Record</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 6->7 -->
+  <path d="M 1589 500 L 1603 500" stroke="#00E5FF" stroke-width="2" marker-end="url(#cyanArrow)"/>
+
+  <!-- ==================== STEP 7: DECISION SUPPORT ==================== -->
+  <g transform="translate(1610, 240)">
+    <!-- Step Badge on Rail -->
+    <circle cx="113" cy="-15" r="18" fill="#0B132B" stroke="#00E676" stroke-width="2"/>
+    <text x="113" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#00E676" text-anchor="middle">07</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="226" height="520" rx="12" fill="url(#cardActiveGrad)" stroke="#10B981" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect x="1" y="16" width="224" height="4" rx="2" fill="url(#greenGrad)"/>
+
+    <!-- Card Header -->
+    <g transform="translate(18, 42)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#00E676" letter-spacing="1">STAGE 07</text>
+      <text y="22" class="font-sans" font-size="17" font-weight="700" fill="#FFFFFF">Decision Support</text>
+      <text y="40" class="font-sans" font-size="12" font-weight="500" fill="#6EE7B7">Actionable Engineering Brief</text>
+    </g>
+
+    <!-- Graphic Box / Diagram: Decision Advisory -->
+    <g transform="translate(18, 102)">
+      <rect width="190" height="96" rx="8" fill="#061E1A" stroke="#047857" stroke-width="1"/>
+      <g transform="translate(12, 14)">
+        <rect x="0" y="0" width="166" height="68" rx="4" fill="#064E3B" fill-opacity="0.5" stroke="#10B981" stroke-width="1"/>
+        <text x="10" y="16" class="font-mono" font-size="8" font-weight="700" fill="#34D399">ADVISORY DIRECTIVE</text>
+        <text x="10" y="30" class="font-sans" font-size="9.5" font-weight="700" fill="#FFFFFF">Stage LCM &amp; Throttle ROP</text>
+        <text x="10" y="44" class="font-sans" font-size="8.5" fill="#A7F3D0">Pre-mix 35 bbl coarse blend.</text>
+        <text x="10" y="58" class="font-mono" font-size="8" fill="#6EE7B7">Copilot QA &amp; Brief ready ✓</text>
+      </g>
+    </g>
+
+    <!-- Detailed Workflow Description -->
+    <g transform="translate(18, 220)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#34D399">OPERATIONAL ACTIONS</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E676"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Real-Time Risk Banner</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Presents high-visibility warning to rig crew before penetrating loss zone.</text>
+      </g>
+
+      <g transform="translate(0, 66)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E676"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Evidence-Linked Copilot</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Answers ad-hoc engineer queries with direct clickable citations to DDR records.</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <circle cx="4" cy="5" r="2.5" fill="#00E676"/>
+        <text x="14" y="8" class="font-sans" font-size="11.5" fill="#E2E8F0" font-weight="500">Printable Intelligence Brief</text>
+        <text x="14" y="24" class="font-sans" font-size="10" fill="#94A3B8">Generates shift-handover intelligence brief for morning operational alignment.</text>
+      </g>
+    </g>
+
+    <!-- Output Pill -->
+    <g transform="translate(18, 475)">
+      <rect width="190" height="38" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+      <text x="10" y="16" class="font-mono" font-size="9" fill="#34D399">OPERATIONAL OUTCOME</text>
+      <text x="10" y="30" class="font-sans" font-size="11" font-weight="700" fill="#FFFFFF">Mitigated NPT &amp; Safe Trip</text>
+    </g>
+  </g>
+
+  <!-- ==================== BOTTOM FOUNDATIONAL PRINCIPLE CARDS ==================== -->
+  <g transform="translate(80, 810)">
+    <!-- Container Bar -->
+    <rect x="0" y="0" width="1760" height="210" rx="14" fill="#0D1628" fill-opacity="0.9" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Principle 1: Human-in-the-Loop Governance -->
+    <g transform="translate(40, 30)">
+      <rect x="0" y="0" width="40" height="40" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+      <text x="20" y="26" class="font-sans" font-size="18" fill="#38BDF8" text-anchor="middle">🛡️</text>
+      <text x="56" y="20" class="font-sans" font-size="16" font-weight="700" fill="#FFFFFF">Human-in-the-Loop Decision Governance</text>
+      <text x="56" y="38" class="font-mono" font-size="10.5" fill="#00E5FF">ENGINEERING AUTHORITY RETAINED</text>
+      <text x="0" y="70" class="font-sans" font-size="12" fill="#94A3B8" width="480">
+        NWIS functions strictly as a decision-support advisory system. It never commands rig actuators or replaces mud engineers. The drilling superintendent and company representative review all historical insights before adjusting mud weight or rotary speeds.
+      </text>
+    </g>
+
+    <line x1="580" y1="30" x2="580" y2="180" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Principle 2: Complete Traceability -->
+    <g transform="translate(630, 30)">
+      <rect x="0" y="0" width="40" height="40" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+      <text x="20" y="26" class="font-sans" font-size="18" fill="#10B981" text-anchor="middle">📑</text>
+      <text x="56" y="20" class="font-sans" font-size="16" font-weight="700" fill="#FFFFFF">Deterministic &amp; Auditable Traceability</text>
+      <text x="56" y="38" class="font-mono" font-size="10.5" fill="#10B981">ZERO BLACK-BOX HALLUCINATION</text>
+      <text x="0" y="70" class="font-sans" font-size="12" fill="#94A3B8">
+        Every risk alert and Copilot recommendation maps directly to an authenticated source file, paragraph number, and recorded borehole log. Rig crews can cross-verify findings instantly against physical Oil India completion reports without speculation.
+      </text>
+    </g>
+
+    <line x1="1170" y1="30" x2="1170" y2="180" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Principle 3: Anticipatory Look-Ahead -->
+    <g transform="translate(1220, 30)">
+      <rect x="0" y="0" width="40" height="40" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+      <text x="20" y="26" class="font-sans" font-size="18" fill="#F59E0B" text-anchor="middle">🔭</text>
+      <text x="56" y="20" class="font-sans" font-size="16" font-weight="700" fill="#FFFFFF">Dynamic Look-Ahead Horizon</text>
+      <text x="56" y="38" class="font-mono" font-size="10.5" fill="#F59E0B">PROACTIVE HAZARD SCREENING</text>
+      <text x="0" y="70" class="font-sans" font-size="12" fill="#94A3B8">
+        Instead of reacting after a kick or severe circulation loss occurs, NWIS projects ahead of the bit (50–200m). This grants crews 4 to 8 hours of advance operational buffer to condition mud systems, pre-stage lost circulation material, and inspect BHA.
+      </text>
+    </g>
+  </g>
+
+  <!-- ==================== FOOTER BRANDING ==================== -->
+  <g transform="translate(80, 1055)">
+    <text class="font-mono" font-size="11" fill="#475569">NWIS — NEARBY WELLS INTELLIGENCE SYSTEM</text>
+    <text x="1760" y="0" class="font-mono" font-size="11" fill="#475569" text-anchor="end">SIH 2026 • PROBLEM PS26121 • CONCEPTUAL WORKFLOW VISUAL</text>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj
+4 0 obj << /Length 807 >> stream
+BT
+/F1 12 Tf
+50 750 Td
+16 TL
+(DAILY DRILLING REPORT - Well X09) Tj
+T* (Report Date: 2024-04-12 | Current Depth: 3790 m MD | Basin: Assam-Arakan) Tj
+T* (Formation Lithology Table:) Tj
+T* (Barail Shale: 3700 m to 3820 m) Tj
+T* (Operations Summary & Incident Log:) Tj
+T* (At 3764 m depth in Barail Shale, severe mud loss observed with loss rate ~18 bbl/hr.) Tj
+T* (Mitigation: Spotted LCM pill \(CaCO3 25 ppb\) to cure lost circulation.) Tj
+T* (At 3772 m, experienced tight hole and stuck pipe condition with 18 tonnes overpull. Worked string worked free after 45 minutes.) Tj
+T* (Drilling continued: torque spike observed across 3778 to 3790 m with erratic torque 17 to 26 kNm.) Tj
+T* (Mitigation applied: mud weight raised 1.06 to 1.09 sg, conducted wiper trip, connection standstill under 10 minutes.) Tj
+ET
+endstream
+endobj
+5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001099 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+1169
+%%EOF

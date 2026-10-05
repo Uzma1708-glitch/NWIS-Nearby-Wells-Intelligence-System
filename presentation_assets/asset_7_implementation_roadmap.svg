@@ -1,0 +1,485 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060B14"/>
+      <stop offset="50%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#080E1C"/>
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="cardCompletedGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142442" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0C162A" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <linearGradient id="cardFutureGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#182033" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0F1422" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Status Accents -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#00A3FF"/>
+    </linearGradient>
+
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadow7" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid7" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+
+    <marker id="cyanArrow7" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M 1 1 L 6 4 L 1 7 Z" fill="#00E5FF"/>
+    </marker>
+
+    <marker id="amberArrow7" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M 1 1 L 6 4 L 1 7 Z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+
+  <style>
+    .font-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace; }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1920" height="1080" fill="url(#bgGrad7)"/>
+  <rect width="1920" height="1080" fill="url(#grid7)"/>
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <g transform="translate(80, 50)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="450" height="28" rx="14" fill="#1E293B" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+    <circle cx="14" cy="14" r="5" fill="#38BDF8"/>
+    <text x="28" y="19" class="font-mono" font-size="11" font-weight="700" fill="#38BDF8" letter-spacing="1.5">ENTERPRISE IMPLEMENTATION &amp; FEASIBILITY</text>
+
+    <!-- Main Title -->
+    <text x="0" y="70" class="font-sans" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">NWIS Feasibility &amp; Implementation Roadmap</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="100" class="font-sans" font-size="15" font-weight="400" fill="#94A3B8">
+      A disciplined five-stage progression from hackathon functional prototype to enterprise eRTMAC decision support layer.
+    </text>
+
+    <!-- Stage Reality Legend (Top Right) -->
+    <g transform="translate(1160, 15)">
+      <rect x="0" y="0" width="600" height="50" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <g transform="translate(20, 16)">
+        <rect x="0" y="4" width="12" height="12" rx="3" fill="#00E5FF"/>
+        <text x="20" y="15" class="font-mono" font-size="11" font-weight="700" fill="#00E5FF">STAGES 1–2: COMPLETED (PROTOTYPE)</text>
+      </g>
+      <g transform="translate(320, 16)">
+        <rect x="0" y="4" width="12" height="12" rx="3" fill="#F59E0B" stroke="#D97706" stroke-width="1" stroke-dasharray="2 1"/>
+        <text x="20" y="15" class="font-mono" font-size="11" font-weight="700" fill="#F59E0B">STAGES 3–5: FUTURE STAGES (PLANNED)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== HORIZONTAL TIMELINE CONNECTOR RAIL ==================== -->
+  <g transform="translate(90, 205)">
+    <!-- Base track line (Stage 1 to 2: Solid Cyan) -->
+    <line x1="30" y1="20" x2="680" y2="20" stroke="#00E5FF" stroke-width="4" stroke-linecap="round"/>
+    <!-- Transition Dot -->
+    <circle cx="680" cy="20" r="6" fill="#00E5FF"/>
+    <!-- Future track line (Stage 3 to 5: Dashed Amber/Muted) -->
+    <line x1="685" y1="20" x2="1710" y2="20" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+  </g>
+
+  <!-- ==================== FIVE PROGRESSION CARDS ==================== -->
+  <!-- Card Width: 320px, Gap: 35px -> Total: 5 * 320 + 4 * 35 = 1600 + 140 = 1740px. Left margin = 90px -->
+
+  <!-- ==================== STAGE 1: PUBLIC HISTORICAL DATA ==================== -->
+  <g transform="translate(90, 240)">
+    <!-- Rail Node Badge -->
+    <circle cx="160" cy="-15" r="18" fill="#0B132B" stroke="#00E5FF" stroke-width="2"/>
+    <text x="160" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#00E5FF" text-anchor="middle">01</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="320" height="540" rx="12" fill="url(#cardCompletedGrad)" stroke="#1E3A8A" stroke-width="2" filter="url(#shadow7)"/>
+    <rect x="1" y="16" width="318" height="5" rx="2" fill="url(#cyanGrad)"/>
+
+    <!-- Status Badge -->
+    <g transform="translate(20, 36)">
+      <rect width="170" height="24" rx="12" fill="#0284C7" fill-opacity="0.25" stroke="#00E5FF" stroke-width="1"/>
+      <circle cx="12" cy="12" r="4" fill="#00E5FF"/>
+      <text x="24" y="16" class="font-mono" font-size="10" font-weight="700" fill="#00E5FF">COMPLETED • PROTOTYPE</text>
+    </g>
+
+    <!-- Title & Description -->
+    <g transform="translate(20, 78)">
+      <text class="font-mono" font-size="11" font-weight="700" fill="#38BDF8" letter-spacing="1">STAGE 01</text>
+      <text y="24" class="font-sans" font-size="19" font-weight="800" fill="#FFFFFF">Public Historical Data</text>
+      <text y="44" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">Aggregation &amp; Baseline Structuring</text>
+    </g>
+
+    <!-- Key Scope Items -->
+    <g transform="translate(20, 160)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#38BDF8" letter-spacing="0.5">TECHNICAL MILESTONES</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="5" cy="5" r="3" fill="#00E5FF"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Borehole Record Parsing</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Ingested 18+ public NLOG borehole records and well metadata tables.</text>
+      </g>
+
+      <g transform="translate(0, 72)">
+        <circle cx="5" cy="5" r="3" fill="#00E5FF"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Geospatial Coordinate Sync</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Unified coordinate datums to WGS84 for accurate Haversine distance math.</text>
+      </g>
+
+      <g transform="translate(0, 124)">
+        <circle cx="5" cy="5" r="3" fill="#00E5FF"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Synthetic Offset Dataset</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Curated realistic prototype wells (X03–X21) honoring Assam-Arakan geology.</text>
+      </g>
+
+      <g transform="translate(0, 176)">
+        <circle cx="5" cy="5" r="3" fill="#00E5FF"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Depth Datum Standardization</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Established clean schemas for Measured Depth (MD) and TVD conversions.</text>
+      </g>
+    </g>
+
+    <!-- Deliverable Block -->
+    <g transform="translate(20, 480)">
+      <rect width="280" height="54" rx="8" fill="#091424" stroke="#1E3A8A" stroke-width="1"/>
+      <text x="12" y="18" class="font-mono" font-size="9.5" font-weight="700" fill="#38BDF8">VALIDATED DELIVERABLE</text>
+      <text x="12" y="38" class="font-sans" font-size="12" font-weight="700" fill="#FFFFFF">Standardized Offset Well Database</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 1->2 -->
+  <path d="M 415 500 L 440 500" stroke="#00E5FF" stroke-width="2.5" marker-end="url(#cyanArrow7)"/>
+
+  <!-- ==================== STAGE 2: STRUCTURED KNOWLEDGE LAYER ==================== -->
+  <g transform="translate(445, 240)">
+    <!-- Rail Node Badge -->
+    <circle cx="160" cy="-15" r="18" fill="#0B132B" stroke="#00E5FF" stroke-width="2"/>
+    <text x="160" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#00E5FF" text-anchor="middle">02</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="320" height="540" rx="12" fill="url(#cardCompletedGrad)" stroke="#1E3A8A" stroke-width="2" filter="url(#shadow7)"/>
+    <rect x="1" y="16" width="318" height="5" rx="2" fill="url(#cyanGrad)"/>
+
+    <!-- Status Badge -->
+    <g transform="translate(20, 36)">
+      <rect width="170" height="24" rx="12" fill="#0284C7" fill-opacity="0.25" stroke="#00E5FF" stroke-width="1"/>
+      <circle cx="12" cy="12" r="4" fill="#00E5FF"/>
+      <text x="24" y="16" class="font-mono" font-size="10" font-weight="700" fill="#00E5FF">COMPLETED • PROTOTYPE</text>
+    </g>
+
+    <!-- Title & Description -->
+    <g transform="translate(20, 78)">
+      <text class="font-mono" font-size="11" font-weight="700" fill="#38BDF8" letter-spacing="1">STAGE 02</text>
+      <text y="24" class="font-sans" font-size="19" font-weight="800" fill="#FFFFFF">Structured Knowledge</text>
+      <text y="44" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">In-Browser OCR &amp; Heuristic Engine</text>
+    </g>
+
+    <!-- Key Scope Items -->
+    <g transform="translate(20, 160)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#38BDF8" letter-spacing="0.5">TECHNICAL MILESTONES</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="5" cy="5" r="3" fill="#00E5FF"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">In-Browser OCR Extraction</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Integrated Tesseract.js client-side parser to digitize scanned DDR/WCR reports.</text>
+      </g>
+
+      <g transform="translate(0, 72)">
+        <circle cx="5" cy="5" r="3" fill="#00E5FF"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Domain Event Recognition</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Implemented rule-based extraction for kicks, severe losses, and tight hole events.</text>
+      </g>
+
+      <g transform="translate(0, 124)">
+        <circle cx="5" cy="5" r="3" fill="#00E5FF"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Multi-Factor Relevance Scoring</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Deterministic 4-variable scoring prioritizing highest-value offset wells.</text>
+      </g>
+
+      <g transform="translate(0, 176)">
+        <circle cx="5" cy="5" r="3" fill="#00E5FF"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Look-Ahead Hazard Screening</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Dynamic depth projection (+100m) with direct evidence citations &amp; Copilot QA.</text>
+      </g>
+    </g>
+
+    <!-- Deliverable Block -->
+    <g transform="translate(20, 480)">
+      <rect width="280" height="54" rx="8" fill="#091424" stroke="#1E3A8A" stroke-width="1"/>
+      <text x="12" y="18" class="font-mono" font-size="9.5" font-weight="700" fill="#38BDF8">VALIDATED DELIVERABLE</text>
+      <text x="12" y="38" class="font-sans" font-size="12" font-weight="700" fill="#FFFFFF">Functional NWIS Software Prototype</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 2->3 (Transition to Future Phase) -->
+  <path d="M 770 500 L 795 500" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="4 3" marker-end="url(#amberArrow7)"/>
+
+  <!-- ==================== STAGE 3: DOMAIN EXPERT VALIDATION ==================== -->
+  <g transform="translate(800, 240)">
+    <!-- Rail Node Badge -->
+    <circle cx="160" cy="-15" r="18" fill="#0B132B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="160" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#F59E0B" text-anchor="middle">03</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="320" height="540" rx="12" fill="url(#cardFutureGrad)" stroke="#B45309" stroke-width="1.8" stroke-dasharray="6 3" filter="url(#shadow7)"/>
+    <rect x="1" y="16" width="318" height="5" rx="2" fill="url(#amberGrad)"/>
+
+    <!-- Status Badge -->
+    <g transform="translate(20, 36)">
+      <rect width="180" height="24" rx="12" fill="#78350F" fill-opacity="0.3" stroke="#F59E0B" stroke-width="1"/>
+      <circle cx="12" cy="12" r="4" fill="#F59E0B"/>
+      <text x="24" y="16" class="font-mono" font-size="10" font-weight="700" fill="#F59E0B">FUTURE • PLANNED STAGE</text>
+    </g>
+
+    <!-- Title & Description -->
+    <g transform="translate(20, 78)">
+      <text class="font-mono" font-size="11" font-weight="700" fill="#F59E0B" letter-spacing="1">STAGE 03</text>
+      <text y="24" class="font-sans" font-size="19" font-weight="800" fill="#FFFFFF">Domain Validation</text>
+      <text y="44" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">OIL Engineering Review &amp; Tuning</text>
+    </g>
+
+    <!-- Key Scope Items -->
+    <g transform="translate(20, 160)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#F59E0B" letter-spacing="0.5">PLANNED ACTIVITIES</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="5" cy="5" r="3" fill="#F59E0B"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Heuristic Weight Calibration</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Conduct structured workshops with OIL drilling engineers to calibrate formula.</text>
+      </g>
+
+      <g transform="translate(0, 72)">
+        <circle cx="5" cy="5" r="3" fill="#F59E0B"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Geologic Stratigraphy Review</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Verify formation marker naming and fault boundaries with subsurface team.</text>
+      </g>
+
+      <g transform="translate(0, 124)">
+        <circle cx="5" cy="5" r="3" fill="#F59E0B"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">False Alert Threshold Tuning</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Establish alert sensitivity limits to eliminate alert fatigue in rig operations.</text>
+      </g>
+
+      <g transform="translate(0, 176)">
+        <circle cx="5" cy="5" r="3" fill="#F59E0B"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">SOP Integration Mapping</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Align hazard mitigations with Oil India standard drilling operating procedures.</text>
+      </g>
+    </g>
+
+    <!-- Deliverable Block -->
+    <g transform="translate(20, 480)">
+      <rect width="280" height="54" rx="8" fill="#1C1408" stroke="#B45309" stroke-width="1"/>
+      <text x="12" y="18" class="font-mono" font-size="9.5" font-weight="700" fill="#F59E0B">TARGET DELIVERABLE</text>
+      <text x="12" y="38" class="font-sans" font-size="12" font-weight="700" fill="#FFFFFF">Domain-Validated Scoring Baseline</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 3->4 -->
+  <path d="M 1125 500 L 1150 500" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="4 3" marker-end="url(#amberArrow7)"/>
+
+  <!-- ==================== STAGE 4: CONTROLLED HISTORICAL PILOT ==================== -->
+  <g transform="translate(1155, 240)">
+    <!-- Rail Node Badge -->
+    <circle cx="160" cy="-15" r="18" fill="#0B132B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="160" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#F59E0B" text-anchor="middle">04</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="320" height="540" rx="12" fill="url(#cardFutureGrad)" stroke="#B45309" stroke-width="1.8" stroke-dasharray="6 3" filter="url(#shadow7)"/>
+    <rect x="1" y="16" width="318" height="5" rx="2" fill="url(#amberGrad)"/>
+
+    <!-- Status Badge -->
+    <g transform="translate(20, 36)">
+      <rect width="180" height="24" rx="12" fill="#78350F" fill-opacity="0.3" stroke="#F59E0B" stroke-width="1"/>
+      <circle cx="12" cy="12" r="4" fill="#F59E0B"/>
+      <text x="24" y="16" class="font-mono" font-size="10" font-weight="700" fill="#F59E0B">FUTURE • PLANNED STAGE</text>
+    </g>
+
+    <!-- Title & Description -->
+    <g transform="translate(20, 78)">
+      <text class="font-mono" font-size="11" font-weight="700" fill="#F59E0B" letter-spacing="1">STAGE 04</text>
+      <text y="24" class="font-sans" font-size="19" font-weight="800" fill="#FFFFFF">Controlled Pilot</text>
+      <text y="44" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">Historical Wellbore Replay</text>
+    </g>
+
+    <!-- Key Scope Items -->
+    <g transform="translate(20, 160)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#F59E0B" letter-spacing="0.5">PLANNED ACTIVITIES</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="5" cy="5" r="3" fill="#F59E0B"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Historical Well Replay</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Replay 5–10 recently completed OIL wells with documented NPT incidents in sandbox.</text>
+      </g>
+
+      <g transform="translate(0, 72)">
+        <circle cx="5" cy="5" r="3" fill="#F59E0B"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Early Warning Benchmarking</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Measure advance warning lead time (hours/meters) generated ahead of real past kicks.</text>
+      </g>
+
+      <g transform="translate(0, 124)">
+        <circle cx="5" cy="5" r="3" fill="#F59E0B"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Drilling Team User Testing</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Evaluate usability with active shift engineers during morning planning sessions.</text>
+      </g>
+
+      <g transform="translate(0, 176)">
+        <circle cx="5" cy="5" r="3" fill="#F59E0B"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Report Template Refinement</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Standardize Intelligence Brief formatting to match OIL daily reporting protocols.</text>
+      </g>
+    </g>
+
+    <!-- Deliverable Block -->
+    <g transform="translate(20, 480)">
+      <rect width="280" height="54" rx="8" fill="#1C1408" stroke="#B45309" stroke-width="1"/>
+      <text x="12" y="18" class="font-mono" font-size="9.5" font-weight="700" fill="#F59E0B">TARGET DELIVERABLE</text>
+      <text x="12" y="38" class="font-sans" font-size="12" font-weight="700" fill="#FFFFFF">Retrospective Pilot Audit Report</text>
+    </g>
+  </g>
+
+  <!-- Rail Transition Arrow 4->5 -->
+  <path d="M 1480 500 L 1505 500" stroke="#8B5CF6" stroke-width="2.5" stroke-dasharray="4 3" marker-end="url(#cyanArrow7)"/>
+
+  <!-- ==================== STAGE 5: FIELD VALIDATION & ERTMAC SCALING ==================== -->
+  <g transform="translate(1510, 240)">
+    <!-- Rail Node Badge -->
+    <circle cx="160" cy="-15" r="18" fill="#0B132B" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="160" y="-9" class="font-mono" font-size="13" font-weight="800" fill="#A78BFA" text-anchor="middle">05</text>
+
+    <!-- Card Body -->
+    <rect x="0" y="15" width="320" height="540" rx="12" fill="url(#cardFutureGrad)" stroke="#6D28D9" stroke-width="1.8" stroke-dasharray="6 3" filter="url(#shadow7)"/>
+    <rect x="1" y="16" width="318" height="5" rx="2" fill="url(#purpleGrad)"/>
+
+    <!-- Status Badge -->
+    <g transform="translate(20, 36)">
+      <rect width="180" height="24" rx="12" fill="#4C1D95" fill-opacity="0.3" stroke="#A78BFA" stroke-width="1"/>
+      <circle cx="12" cy="12" r="4" fill="#A78BFA"/>
+      <text x="24" y="16" class="font-mono" font-size="10" font-weight="700" fill="#A78BFA">FUTURE • TARGET SCALING</text>
+    </g>
+
+    <!-- Title & Description -->
+    <g transform="translate(20, 78)">
+      <text class="font-mono" font-size="11" font-weight="700" fill="#A78BFA" letter-spacing="1">STAGE 05</text>
+      <text y="24" class="font-sans" font-size="19" font-weight="800" fill="#FFFFFF">eRTMAC Scaling</text>
+      <text y="44" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">Live Rig Integration &amp; Deployment</text>
+    </g>
+
+    <!-- Key Scope Items -->
+    <g transform="translate(20, 160)">
+      <text class="font-mono" font-size="10" font-weight="700" fill="#A78BFA" letter-spacing="0.5">TARGET CAPABILITIES</text>
+
+      <g transform="translate(0, 20)">
+        <circle cx="5" cy="5" r="3" fill="#A78BFA"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">WITSML Stream Ingestion</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Connect live WITSML 1.4/2.0 telemetry from active rigs directly into NWIS.</text>
+      </g>
+
+      <g transform="translate(0, 72)">
+        <circle cx="5" cy="5" r="3" fill="#A78BFA"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">eRTMAC Console Embed</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Display historical hazard look-ahead directly alongside real-time eRTMAC displays.</text>
+      </g>
+
+      <g transform="translate(0, 124)">
+        <circle cx="5" cy="5" r="3" fill="#A78BFA"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Air-Gapped Enterprise Host</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Deploy securely on OIL private enterprise cloud or on-premise Duliajan datacenter.</text>
+      </g>
+
+      <g transform="translate(0, 176)">
+        <circle cx="5" cy="5" r="3" fill="#A78BFA"/>
+        <text x="16" y="8" class="font-sans" font-size="12" font-weight="600" fill="#E2E8F0">Multi-Rig Fleet Monitoring</text>
+        <text x="16" y="24" class="font-sans" font-size="10.5" fill="#94A3B8">Scale system across 20+ active drilling rigs simultaneously across northeast basins.</text>
+      </g>
+    </g>
+
+    <!-- Deliverable Block -->
+    <g transform="translate(20, 480)">
+      <rect width="280" height="54" rx="8" fill="#1E1433" stroke="#6D28D9" stroke-width="1"/>
+      <text x="12" y="18" class="font-mono" font-size="9.5" font-weight="700" fill="#A78BFA">FINAL VISION</text>
+      <text x="12" y="38" class="font-sans" font-size="12" font-weight="700" fill="#FFFFFF">Production eRTMAC Decision Support</text>
+    </g>
+  </g>
+
+  <!-- ==================== BOTTOM FEASIBILITY PILLARS ==================== -->
+  <g transform="translate(90, 815)">
+    <!-- Master Container -->
+    <rect width="1740" height="205" rx="12" fill="#0B1325" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Pillar 1: Technical Feasibility -->
+    <g transform="translate(30, 25)">
+      <rect width="32" height="32" rx="6" fill="#1E293B" stroke="#00E5FF" stroke-width="1"/>
+      <text x="16" y="21" class="font-sans" font-size="15" fill="#00E5FF" text-anchor="middle">⚡</text>
+      <text x="44" y="18" class="font-sans" font-size="15" font-weight="700" fill="#FFFFFF">Technical Feasibility</text>
+      <text x="44" y="34" class="font-mono" font-size="10" fill="#00E5FF">LIGHTWEIGHT ARCHITECTURE</text>
+      <text x="0" y="60" class="font-sans" font-size="11.5" fill="#94A3B8" width="380">
+        Requires no supercomputing or specialized GPU clusters. Operates on standard workstation hardware via lightweight FastAPI and browser-based client inference.
+      </text>
+    </g>
+
+    <line x1="435" y1="20" x2="435" y2="185" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Pillar 2: Data Security & Governance -->
+    <g transform="translate(465, 25)">
+      <rect width="32" height="32" rx="6" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+      <text x="16" y="21" class="font-sans" font-size="15" fill="#10B981" text-anchor="middle">🔒</text>
+      <text x="44" y="18" class="font-sans" font-size="15" font-weight="700" fill="#FFFFFF">Data Security &amp; Air-Gap</text>
+      <text x="44" y="34" class="font-mono" font-size="10" fill="#10B981">STRICT OIL PRIVACY</text>
+      <text x="0" y="60" class="font-sans" font-size="11.5" fill="#94A3B8">
+        Full on-premise execution ensures sensitive well completion reports, formation tops, and incident logs never egress Oil India's secure enterprise perimeter.
+      </text>
+    </g>
+
+    <line x1="870" y1="20" x2="870" y2="185" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Pillar 3: Non-Disruptive Adoption -->
+    <g transform="translate(900, 25)">
+      <rect width="32" height="32" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+      <text x="16" y="21" class="font-sans" font-size="15" fill="#F59E0B" text-anchor="middle">🤝</text>
+      <text x="44" y="18" class="font-sans" font-size="15" font-weight="700" fill="#FFFFFF">Non-Disruptive Adoption</text>
+      <text x="44" y="34" class="font-mono" font-size="10" fill="#F59E0B">COMPLEMENTS eRTMAC</text>
+      <text x="0" y="60" class="font-sans" font-size="11.5" fill="#94A3B8">
+        Designed to sit alongside existing eRTMAC screens without displacing current monitoring workflows or altering rig-site reporting chains of command.
+      </text>
+    </g>
+
+    <line x1="1305" y1="20" x2="1305" y2="185" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Pillar 4: Phased Investment & ROI -->
+    <g transform="translate(1335, 25)">
+      <rect width="32" height="32" rx="6" fill="#1E293B" stroke="#A78BFA" stroke-width="1"/>
+      <text x="16" y="21" class="font-sans" font-size="15" fill="#A78BFA" text-anchor="middle">📈</text>
+      <text x="44" y="18" class="font-sans" font-size="15" font-weight="700" fill="#FFFFFF">Measurable ROI Pathway</text>
+      <text x="44" y="34" class="font-mono" font-size="10" fill="#A78BFA">AVERTING DRILLING NPT</text>
+      <text x="0" y="60" class="font-sans" font-size="11.5" fill="#94A3B8">
+        Preventing a single stuck pipe incident or severe circulation loss event saves ₹25L–₹1 Cr in rig downtime, immediately recovering full deployment investment.
+      </text>
+    </g>
+  </g>
+
+  <!-- ==================== FOOTER ==================== -->
+  <g transform="translate(90, 1055)">
+    <text class="font-mono" font-size="11" fill="#475569">NWIS — NEARBY WELLS INTELLIGENCE SYSTEM</text>
+    <text x="1740" y="0" class="font-mono" font-size="11" fill="#475569" text-anchor="end">SIH 2026 • PROBLEM PS26121 • ROADMAP &amp; FEASIBILITY</text>
+  </g>
+</svg>
