@@ -1,284 +1,332 @@
-\# NWIS — Nearby Wells Intelligence System
+# NWIS — Nearby Wells Intelligence System
 
+### Smart Historical Well Intelligence for Safer Drilling Decisions
 
+**Smart India Hackathon 2026 | Problem Statement: SIH26121 | Organization: Oil India Limited**
 
-\### Smart India Hackathon 2026 | Problem Statement 26121
+**Past Wells. Smarter Drilling.**
 
+NWIS is a prototype decision-support platform that transforms historical drilling records and nearby well information into accessible, depth-aware intelligence. It helps drilling teams identify relevant offset wells, examine previous operational challenges, and make more informed decisions before approaching similar subsurface intervals.
 
+---
 
-\*\*Organization:\*\* Oil India Limited (OIL)
+## Overview
 
+Drilling operations generate valuable information through well trajectories, drilling reports, formation records, and historical incidents. However, this information can be scattered across multiple datasets and documents, making it difficult to retrieve and compare relevant experiences efficiently.
 
+The **Nearby Wells Intelligence System (NWIS)** addresses this challenge by bringing nearby well identification, historical comparison, depth-based risk screening, and evidence-linked insights into a unified interface.
 
-NWIS is a prototype drilling decision-support platform designed to connect nearby and historical well information with the current drilling context.
+NWIS is designed as an intelligence layer that complements existing drilling monitoring systems rather than replacing them.
 
+## Problem Statement
 
+Historical well information is often difficult to access and interpret in the context of an active drilling operation.
 
-It helps engineers explore relevant offset wells, compare historical drilling experiences, identify previously recorded risk intervals, and access supporting evidence before approaching similar conditions.
+Engineers may need to manually search multiple reports to understand:
 
+* Which nearby wells are relevant to the active well.
+* What geological or operational similarities exist.
+* At which depths previous drilling problems occurred.
+* What causes and mitigation measures were recorded.
+* Whether historical experience can inform upcoming drilling intervals.
 
+This fragmented process can delay access to useful information and limit the effective reuse of previous drilling knowledge.
 
-\## The Problem
+## Our Solution
 
+NWIS combines geospatial well discovery, offset-well relevance assessment, historical incident screening, and document intelligence into one decision-support workflow.
 
+The prototype enables users to:
 
-Historical drilling knowledge is often distributed across daily drilling reports, well completion reports, mud logs, and other operational records.
+* Identify nearby wells using location and radius-based filtering.
+* Compare historical well information and available trajectories.
+* Examine relevant drilling incidents against the active well's depth.
+* Retrieve information from historical reports.
+* View risk indicators alongside supporting historical evidence.
+* Generate a consolidated intelligence brief for review.
 
+The system emphasizes historical evidence and human review rather than presenting heuristic alerts as confirmed predictions.
 
+## Key Features
 
-Finding relevant information manually can be time-consuming, making it difficult to use previous well experiences during current drilling operations.
+| Feature                          | Description                                                                                                        |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Interactive Well Map             | Visualizes available well locations and supports nearby-well discovery.                                            |
+| Radius-Based Search              | Filters candidate offset wells using configurable geographic distance.                                             |
+| Offset-Well Relevance            | Assesses well relevance using available distance, formation, depth, and historical information.                    |
+| Depth-Aware Risk Screening       | Compares historical incident intervals with a configurable look-ahead depth window.                                |
+| Historical Incident Intelligence | Organizes available records of drilling challenges such as mud losses, stuck pipe, and torque-related issues.      |
+| Cross-Well Comparison            | Supports comparison of available drilling parameters and historical well information.                              |
+| Document Intelligence            | Extracts relevant information from supported reports using PDF processing, OCR, and domain-specific text matching. |
+| Evidence-Linked Insights         | Connects displayed findings with available historical source information.                                          |
+| Intelligence Brief               | Provides a consolidated view of relevant findings for operational review.                                          |
 
-
-
-\## Our Solution
-
-
-
-NWIS brings historical well information into a unified interface and demonstrates a workflow for:
-
-
-
-\* Identifying nearby wells using geographical proximity.
-
-\* Comparing historical wells using available well and depth information.
-
-\* Screening historical drilling events around a selected depth interval.
-
-\* Extracting information from reports using browser-based OCR and domain-specific text processing.
-
-\* Presenting historical evidence and decision-support insights.
-
-\* Preserving drilling knowledge for future reference.
-
-
-
-\## Key Features
-
-
-
-\* Interactive nearby-well map
-
-\* Offset-well relevance assessment
-
-\* Depth-based historical risk screening
-
-\* Historical event and incident exploration
-
-\* PDF text extraction and OCR-assisted processing
-
-\* Evidence-oriented decision support
-
-\* Printable intelligence brief
-
-
-
-\## Technology Stack
-
-
-
-| Layer               | Technologies                          |
-
-| ------------------- | ------------------------------------- |
-
-| Frontend            | React, TypeScript, Vite               |
-
-| Mapping             | Leaflet                               |
-
-| Backend             | Python, FastAPI                       |
-
-| Database            | SQLAlchemy, SQLite/PostgreSQL support |
-
-| Database migrations | Alembic                               |
-
-| Document processing | PDF.js, Tesseract.js                  |
-
-| API communication   | Axios                                 |
-
-
-
-\## How It Works
-
-
-
-1\. Select an active well and its current drilling context.
-
-2\. Identify nearby historical wells.
-
-3\. Assess offset-well relevance.
-
-4\. Compare available depth and historical event information.
-
-5\. Screen for relevant historical risk intervals.
-
-6\. Present alerts and supporting information to the engineer.
-
-
-
-\## Prototype Data and Limitations
-
-
-
-This submission is a demonstration prototype.
-
-
-
-\* Public NLOG borehole information is used where applicable.
-
-\* Synthetic demonstration wells and simulated telemetry are used to illustrate selected operational scenarios.
-
-\* Risk screening uses prototype logic and heuristic assessments.
-
-\* The system is not currently connected to live Oil India rig telemetry or production eRTMAC services.
-
-\* Historical recommendations require domain-expert review before operational use.
-
-
-
-NWIS is intended to support engineering decisions, not replace the authority of drilling personnel.
-
-
-
-\## Repository Structure
-
-
+## How NWIS Works
 
 ```text
+       Select Active Well
+               |
+               v
+      Identify Nearby Wells
+               |
+               v
+     Assess Offset Relevance
+               |
+               v
+    Examine Historical Records
+               |
+               v
+    Match Relevant Depth Zones
+               |
+               v
+     Screen Historical Hazards
+               |
+               v
+   Present Evidence-Based Insights
+               |
+               v
+       Engineer Review
+```
 
+## Technology Stack
+
+| Layer               | Technologies                                      |
+| ------------------- | ------------------------------------------------- |
+| Frontend            | React, TypeScript, Tailwind CSS                   |
+| Mapping             | Leaflet                                           |
+| Backend             | Python, FastAPI                                   |
+| Database            | SQLite                                            |
+| Document Processing | PDF.js, Tesseract.js                              |
+| Data Processing     | Python-based geospatial and rule-based processing |
+| API Documentation   | FastAPI Swagger UI                                |
+
+## System Architecture
+
+```text
+                  NWIS USER INTERFACE
+                          |
+                          v
+              Interactive Well Map
+                          |
+                          v
+                FastAPI Backend
+                          |
+           +--------------+--------------+
+           |              |              |
+           v              v              v
+      Well Search     Relevance      Risk Screening
+      & Filtering     Assessment     & Depth Matching
+           |              |              |
+           +--------------+--------------+
+                          |
+                          v
+                Historical Data Store
+                          |
+             +------------+------------+
+             |                         |
+             v                         v
+       Well Information          Historical Reports
+             |                         |
+             +------------+------------+
+                          |
+                          v
+              Evidence-Based Insights
+                          |
+                          v
+                 Intelligence Brief
+```
+
+## Prototype Data and Transparency
+
+NWIS currently demonstrates its workflow using a combination of publicly available well information, derived historical data, and simulated demonstration inputs.
+
+| Data Category                  | Usage                                                                                 |
+| ------------------------------ | ------------------------------------------------------------------------------------- |
+| Public NLOG Data               | Used for demonstration of well locations and available well information.              |
+| Derived Historical Information | Used to demonstrate well comparison and historical intelligence workflows.            |
+| Simulated Telemetry            | Used to demonstrate drilling parameter visualization and risk-screening interactions. |
+| Demonstration Incidents        | Used to illustrate historical hazard matching and alert presentation.                 |
+
+**Important:** Demonstration records and simulated telemetry are not verified Oil India Limited operational incidents or live drilling measurements.
+
+The current prototype does not establish a live connection with Oil India's eRTMAC platform or operational WITSML feeds.
+
+## Risk Screening Approach
+
+The prototype uses rule-based and heuristic logic to demonstrate how historical drilling information can support early risk awareness.
+
+The screening workflow considers available information such as:
+
+* Active well depth.
+* Nearby well relevance.
+* Historical incident depth.
+* Configurable look-ahead interval.
+* Available drilling parameters.
+* Supporting historical records.
+
+The resulting indicators are intended to help engineers investigate relevant historical evidence.
+
+They are not validated operational predictions, and any real deployment would require domain-expert review, approved field data, and systematic validation.
+
+## Project Structure
+
+```text
 NWIS/
-
-├── backend/              # FastAPI backend and data services
-
-├── frontend/             # React and TypeScript application
-
-├── docs/                 # Product and technical documentation
-
-├── presentation\_assets/  # SIH presentation visual assets
-
-├── scripts/              # Utility scripts
-
-└── README.md
-
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── ...
+│
+├── README.md
+└── ...
 ```
 
+*The structure above is a simplified overview of the project.*
 
+## Getting Started
 
-\## Local Development
+### Prerequisites
 
+* Python
+* Node.js and npm
+* Git
 
-
-\### Frontend
-
-
+### Clone the Repository
 
 ```bash
+git clone https://github.com/Uzma1708-glitch/NWIS-Nearby-Wells-Intelligence-System.git
 
-cd frontend
-
-npm install
-
-npm run dev
-
+cd NWIS-Nearby-Wells-Intelligence-System
 ```
 
+### Backend Setup
 
-
-The Vite development server will display its local URL in the terminal.
-
-
-
-\### Backend
-
-
+Navigate to the backend directory:
 
 ```bash
-
 cd backend
+```
 
+Create a virtual environment:
+
+```bash
 python -m venv .venv
-
 ```
 
+Activate it on Windows:
 
-
-Activate the environment on Windows:
-
-
-
-```cmd
-
-.venv\\Scripts\\activate
-
+```bash
+.venv\Scripts\activate
 ```
-
-
 
 Install dependencies:
 
-
-
 ```bash
-
 pip install -r requirements.txt
-
 ```
 
+Configure the required environment variables using the project's example configuration, if provided.
 
+Initialize the database using the project's setup procedure.
 
-Create a local `.env` using `.env.example` and configure the database and frontend origin before starting the application.
-
-
-
-The FastAPI application entry point is `main.py`.
-
-
-
-Run from the backend directory:
-
-
+Start the backend using the applicable application entry point:
 
 ```bash
-
 uvicorn main:app --reload
-
 ```
 
+The API documentation is available at:
 
+```text
+http://127.0.0.1:8000/docs
+```
 
-API documentation is available at `/docs` when the backend is running.
+### Frontend Setup
 
+Open a separate terminal and navigate to the frontend directory:
 
+```bash
+cd frontend
+```
 
-Database initialization may require the supplied SQL setup or migration configuration.
+Install dependencies:
 
+```bash
+npm install
+```
 
+Configure the frontend API URL to point to the running backend.
 
-\## Future Scope
+Start the development server:
 
+```bash
+npm run dev
+```
 
+Follow the local URL displayed in the terminal to access the application.
 
-\* Validation with domain experts and historical operational datasets
+*Note: The commands above describe the standard development workflow. Database initialization, environment configuration, and application entry points must match the repository's actual configuration.*
 
-\* Improved geological and depth correlation
+## Current Prototype Limitations
 
-\* Controlled historical backtesting
+* No live integration with Oil India Limited's eRTMAC platform.
+* No live operational telemetry feed.
+* Demonstration telemetry and incident records may be simulated.
+* Risk screening is heuristic and has not been validated for field operations.
+* Available public datasets may not contain all geological or operational attributes required for accurate well-to-well correlation.
+* Historical insights require verification by qualified drilling personnel.
+* The current system is a prototype and is not intended for autonomous drilling decisions.
 
-\* Integration with approved WITSML-compatible data feeds
+## Future Scope
 
-\* Potential integration with Oil India's eRTMAC ecosystem
+* Integration with approved operational and historical well datasets.
+* Validation of offset-well relevance using domain-expert feedback.
+* Improved geological and depth correlation.
+* Backtesting of historical hazard-screening logic.
+* Integration with WITSML-compatible data sources.
+* Potential integration with eRTMAC through authorized interfaces.
+* Advanced analytics and predictive models after sufficient data validation.
+* Enhanced reporting and operational knowledge management.
 
-\* Further evaluation of predictive models using validated data
+## Expected Impact
 
+NWIS aims to support drilling operations through:
 
+* Improved awareness of historical drilling challenges.
+* Faster access to relevant offset-well information.
+* Reduced manual effort in searching historical reports.
+* Better preparation for previously encountered operational risks.
+* Preservation and reuse of institutional drilling knowledge.
+* More informed engineering review and planning.
 
-\## Project Context
+These are intended benefits of the proposed system and have not yet been established through measured field trials.
 
+## References
 
+* [Oil India Limited — Technology Initiatives](https://www.oil-india.com/leveraging-technology)
+* [NLOG — Dutch Oil and Gas Portal](https://www.nlog.nl/en/boreholes)
+* [Energistics — WITSML](https://energistics.org/witsml-developers-users)
 
-Developed as a Smart India Hackathon 2026 solution for Oil India Limited, Problem Statement 26121.
+## Project Information
 
+| Field                | Details                                                    |
+| -------------------- | ---------------------------------------------------------- |
+| Project              | Nearby Wells Intelligence System                           |
+| Abbreviation         | NWIS                                                       |
+| Hackathon            | Smart India Hackathon 2026                                 |
+| Problem Statement ID | SIH26121                                                   |
+| Organization         | Oil India Limited                                          |
+| Project Type         | Software Prototype                                         |
+| Focus Area           | Historical Well Intelligence and Drilling Decision Support |
 
+---
 
-\*\*NWIS — Past Wells, Smarter Drilling.\*\*
-
-
-
+<p align="center">
+  <strong>NWIS — Past Wells. Smarter Drilling.</strong>
+</p>
